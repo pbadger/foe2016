@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -1801,11 +1801,11 @@ Converter with Fault Protection</description>
 <symbol name="RED_LED">
 <pin name="P+" x="0" y="0" length="short" rot="R90"/>
 <pin name="P-" x="0" y="-5.08" length="short" rot="R270"/>
-<wire x1="-2.54" y1="-5.08" x2="2.54" y2="-5.08" width="0.254" layer="94"/>
-<wire x1="2.54" y1="0" x2="0" y2="0" width="0.254" layer="94"/>
-<wire x1="0" y1="0" x2="-2.54" y2="0" width="0.254" layer="94"/>
-<wire x1="-2.54" y1="-5.08" x2="0" y2="0" width="0.254" layer="94"/>
-<wire x1="0" y1="0" x2="2.54" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="-5.08" x2="0" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="0" y1="-5.08" x2="2.54" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="0" x2="0" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="0" y1="-5.08" x2="2.54" y2="0" width="0.254" layer="94"/>
+<wire x1="2.54" y1="0" x2="-2.54" y2="0" width="0.254" layer="94"/>
 </symbol>
 <symbol name="SDCARD_JACK">
 <pin name="DAT1" x="-15.24" y="0" length="short" rot="R270"/>
@@ -2056,16 +2056,16 @@ Converter with Fault Protection</description>
 <devices>
 <device name="" package="DEBUGHEAD">
 <connects>
-<connect gate="G$1" pin="GND1" pad="SWDCLK"/>
-<connect gate="G$1" pin="GND2" pad="NC4"/>
-<connect gate="G$1" pin="NC" pad="NC3"/>
-<connect gate="G$1" pin="NC2" pad="NRESET"/>
-<connect gate="G$1" pin="NC3" pad="DGND1"/>
-<connect gate="G$1" pin="NC4" pad="DGND2"/>
-<connect gate="G$1" pin="RSTB" pad="VREF"/>
-<connect gate="G$1" pin="SWDCLK" pad="NC1"/>
-<connect gate="G$1" pin="SWDIO" pad="NC2"/>
-<connect gate="G$1" pin="VTREF" pad="SWDIO"/>
+<connect gate="G$1" pin="GND1" pad="DGND1"/>
+<connect gate="G$1" pin="GND2" pad="DGND2"/>
+<connect gate="G$1" pin="NC" pad="NC1"/>
+<connect gate="G$1" pin="NC2" pad="NC2"/>
+<connect gate="G$1" pin="NC3" pad="NC3"/>
+<connect gate="G$1" pin="NC4" pad="NC4"/>
+<connect gate="G$1" pin="RSTB" pad="NRESET"/>
+<connect gate="G$1" pin="SWDCLK" pad="SWDCLK"/>
+<connect gate="G$1" pin="SWDIO" pad="SWDIO"/>
+<connect gate="G$1" pin="VTREF" pad="VREF"/>
 </connects>
 <technologies>
 <technology name=""/>
