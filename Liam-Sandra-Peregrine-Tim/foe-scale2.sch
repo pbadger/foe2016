@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.4.0">
+<eagle version="7.5.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -267,22 +267,17 @@
 <wire x1="3.4" y1="-2.2" x2="0.2" y2="-2.2" width="0.127" layer="21"/>
 <text x="5.08" y="-0.635" size="1.27" layer="21">&gt;VALUE</text>
 </package>
-<package name="MICRO-USB-CONNECTOR">
-<smd name="GND" x="0" y="0.65" dx="0.4" dy="1.35" layer="1"/>
-<smd name="ID" x="0.65" y="0.65" dx="0.4" dy="1.35" layer="1"/>
-<smd name="D+" x="1.3" y="0.65" dx="0.4" dy="1.35" layer="1"/>
-<smd name="D-" x="1.95" y="0.65" dx="0.4" dy="1.35" layer="1"/>
-<smd name="VBUS" x="2.6" y="0.65" dx="0.4" dy="1.35" layer="1"/>
-<pad name="P$6" x="-1.05" y="1.25" drill="0.85" diameter="1.1"/>
-<pad name="P$7" x="3.65" y="1.28" drill="0.85" diameter="1.1" rot="R90"/>
-<smd name="P$10" x="1.3" y="-2.15" dx="2.9" dy="1.9" layer="1"/>
-<pad name="P$8" x="-2.925" y="-2" drill="1.3" diameter="1.9" shape="long" rot="R90"/>
-<pad name="P$9" x="5.425" y="-2" drill="1.3" diameter="1.9" shape="long" rot="R90"/>
-<wire x1="-4.2" y1="-4" x2="6.8" y2="-4" width="0.127" layer="21"/>
-<wire x1="6.8" y1="-4" x2="6.8" y2="2.4" width="0.127" layer="21"/>
-<wire x1="6.8" y1="2.4" x2="-4.2" y2="2.4" width="0.127" layer="21"/>
-<wire x1="-4.2" y1="2.4" x2="-4.2" y2="-4" width="0.127" layer="21"/>
-<text x="-1.27" y="-3.81" size="0.508" layer="21">MicroUSB</text>
+<package name="USB-B">
+<pad name="D+" x="0" y="0" drill="1"/>
+<pad name="GND" x="2.5" y="0" drill="1"/>
+<pad name="D-" x="0" y="2" drill="1"/>
+<pad name="VBUS" x="2.5" y="2" drill="1"/>
+<pad name="P$5" x="-4.77" y="-2.71" drill="1"/>
+<pad name="P$6" x="7.27" y="-2.71" drill="1"/>
+<wire x1="-6" y1="3" x2="-6" y2="-17" width="0.127" layer="21"/>
+<wire x1="-6" y1="-17" x2="9" y2="-17" width="0.127" layer="21"/>
+<wire x1="9" y1="-17" x2="9" y2="3" width="0.127" layer="21"/>
+<wire x1="9" y1="3" x2="-6" y2="3" width="0.127" layer="21"/>
 </package>
 <package name="SOT23-6">
 <description>&lt;b&gt;Small Outline Transistor&lt;/b&gt; 6 lead</description>
@@ -538,17 +533,16 @@
 <pin name="3-BLUE" x="-5.08" y="5.08" length="middle" rot="R270"/>
 <pin name="1-RED" x="0" y="5.08" length="middle" rot="R270"/>
 </symbol>
-<symbol name="MICRO-USB-CONNECTOR">
-<pin name="GND" x="0" y="17.78" length="point"/>
-<pin name="ID" x="0" y="12.7" length="point"/>
-<pin name="D+" x="0" y="7.62" length="point"/>
-<pin name="D-" x="0" y="2.54" length="point"/>
-<pin name="VBUS" x="0" y="-2.54" length="point"/>
-<wire x1="0" y1="22.86" x2="-10.16" y2="22.86" width="0.254" layer="94"/>
-<wire x1="-10.16" y1="22.86" x2="-10.16" y2="-5.08" width="0.254" layer="94"/>
-<wire x1="-10.16" y1="-5.08" x2="0" y2="-5.08" width="0.254" layer="94"/>
-<wire x1="0" y1="-5.08" x2="0" y2="22.86" width="0.254" layer="94"/>
-<text x="-10.16" y="20.32" size="1.27" layer="94">MICRO-USB</text>
+<symbol name="USB-B">
+<pin name="VBUS" x="-2.54" y="10.16" length="middle"/>
+<pin name="D-" x="-2.54" y="5.08" length="middle"/>
+<pin name="D+" x="-2.54" y="0" length="middle"/>
+<pin name="GND" x="-2.54" y="-5.08" length="middle"/>
+<wire x1="-2.54" y1="15.24" x2="-2.54" y2="-10.16" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="-10.16" x2="-15.24" y2="-10.16" width="0.254" layer="94"/>
+<wire x1="-15.24" y1="-10.16" x2="-15.24" y2="15.24" width="0.254" layer="94"/>
+<wire x1="-15.24" y1="15.24" x2="-2.54" y2="15.24" width="0.254" layer="94"/>
+<text x="-5.08" y="12.7" size="1.778" layer="94" rot="R180">USB-B</text>
 </symbol>
 <symbol name="AS1363">
 <wire x1="-7.62" y1="12.7" x2="-7.62" y2="-12.7" width="0.254" layer="94"/>
@@ -841,17 +835,16 @@
 </device>
 </devices>
 </deviceset>
-<deviceset name="MICRO-USB-CONNECTOR">
+<deviceset name="USB-B">
 <gates>
-<gate name="G$1" symbol="MICRO-USB-CONNECTOR" x="7.62" y="-10.16"/>
+<gate name="G$1" symbol="USB-B" x="10.16" y="-2.54"/>
 </gates>
 <devices>
-<device name="" package="MICRO-USB-CONNECTOR">
+<device name="" package="USB-B">
 <connects>
 <connect gate="G$1" pin="D+" pad="D+"/>
 <connect gate="G$1" pin="D-" pad="D-"/>
 <connect gate="G$1" pin="GND" pad="GND"/>
-<connect gate="G$1" pin="ID" pad="ID"/>
 <connect gate="G$1" pin="VBUS" pad="VBUS"/>
 </connects>
 <technologies>
@@ -7860,7 +7853,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <part name="C6" library="rcl" deviceset="C-EU" device="C0805K" value="100nF"/>
 <part name="C7" library="rcl" deviceset="C-EU" device="C0805K" value="100nF"/>
 <part name="U$10" library="foe-scale" deviceset="RGBLED" device=""/>
-<part name="U$13" library="foe-scale" deviceset="MICRO-USB-CONNECTOR" device=""/>
+<part name="U$13" library="foe-scale" deviceset="USB-B" device=""/>
 <part name="AS1363" library="foe-scale" deviceset="3.3V_AS1363" device=""/>
 <part name="R11" library="resistor" deviceset="R-US_" device="R0805" value="10k"/>
 <part name="C8" library="rcl" deviceset="C-EU" device="C0805K" value=".1uF"/>
@@ -8367,7 +8360,7 @@ In this library the device names are the same as the pin names of the symbols, t
 </segment>
 <segment>
 <pinref part="U$13" gate="G$1" pin="GND"/>
-<wire x1="215.9" y1="-7.62" x2="241.3" y2="-7.62" width="0.1524" layer="91"/>
+<wire x1="213.36" y1="-30.48" x2="241.3" y2="-7.62" width="0.1524" layer="91"/>
 <wire x1="241.3" y1="-7.62" x2="241.3" y2="-12.7" width="0.1524" layer="91"/>
 <label x="241.3" y="-10.16" size="1.778" layer="95" rot="R180"/>
 <pinref part="SUPPLY23" gate="G$1" pin="DGND"/>
@@ -8594,7 +8587,7 @@ In this library the device names are the same as the pin names of the symbols, t
 </segment>
 <segment>
 <pinref part="U$13" gate="G$1" pin="D-"/>
-<wire x1="215.9" y1="-22.86" x2="231.14" y2="-22.86" width="0.1524" layer="91"/>
+<wire x1="213.36" y1="-20.32" x2="231.14" y2="-22.86" width="0.1524" layer="91"/>
 <wire x1="231.14" y1="-22.86" x2="231.14" y2="-30.48" width="0.1524" layer="91"/>
 <wire x1="231.14" y1="-30.48" x2="289.56" y2="-30.48" width="0.1524" layer="91"/>
 <wire x1="289.56" y1="-30.48" x2="289.56" y2="-22.86" width="0.1524" layer="91"/>
@@ -8611,7 +8604,7 @@ In this library the device names are the same as the pin names of the symbols, t
 </segment>
 <segment>
 <pinref part="U$13" gate="G$1" pin="D+"/>
-<wire x1="215.9" y1="-17.78" x2="246.38" y2="-17.78" width="0.1524" layer="91"/>
+<wire x1="213.36" y1="-25.4" x2="246.38" y2="-17.78" width="0.1524" layer="91"/>
 <wire x1="246.38" y1="-17.78" x2="246.38" y2="-22.86" width="0.1524" layer="91"/>
 <pinref part="D1" gate="G$1" pin="CH1"/>
 <wire x1="246.38" y1="-22.86" x2="269.24" y2="-22.86" width="0.1524" layer="91"/>

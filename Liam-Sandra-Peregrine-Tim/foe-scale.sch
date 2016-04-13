@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.4.0">
+<eagle version="7.5.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -8,20 +8,20 @@
 </settings>
 <grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
-<layer number="1" name="Top" color="4" fill="1" visible="yes" active="no"/>
-<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="no"/>
-<layer number="17" name="Pads" color="2" fill="1" visible="yes" active="no"/>
-<layer number="18" name="Vias" color="2" fill="1" visible="yes" active="no"/>
-<layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="no"/>
-<layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="no"/>
-<layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="no"/>
-<layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="no"/>
-<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="no"/>
-<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="no"/>
-<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="no"/>
-<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="no"/>
-<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="no"/>
-<layer number="28" name="bValues" color="7" fill="1" visible="yes" active="no"/>
+<layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
+<layer number="17" name="Pads" color="2" fill="1" visible="no" active="no"/>
+<layer number="18" name="Vias" color="2" fill="1" visible="no" active="no"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="no" active="no"/>
+<layer number="20" name="Dimension" color="15" fill="1" visible="no" active="no"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="no" active="no"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="no" active="no"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="no"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="no"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="no" active="no"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="no" active="no"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="no" active="no"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="no" active="no"/>
 <layer number="29" name="tStop" color="7" fill="3" visible="no" active="no"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="no" active="no"/>
 <layer number="31" name="tCream" color="7" fill="4" visible="no" active="no"/>
@@ -30,8 +30,8 @@
 <layer number="34" name="bFinish" color="6" fill="6" visible="no" active="no"/>
 <layer number="35" name="tGlue" color="7" fill="4" visible="no" active="no"/>
 <layer number="36" name="bGlue" color="7" fill="5" visible="no" active="no"/>
-<layer number="37" name="tTest" color="7" fill="1" visible="yes" active="no"/>
-<layer number="38" name="bTest" color="7" fill="1" visible="yes" active="no"/>
+<layer number="37" name="tTest" color="7" fill="1" visible="no" active="no"/>
+<layer number="38" name="bTest" color="7" fill="1" visible="no" active="no"/>
 <layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="no"/>
 <layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="no"/>
 <layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="no"/>
@@ -39,12 +39,12 @@
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="no"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="no"/>
 <layer number="45" name="Holes" color="7" fill="1" visible="no" active="no"/>
-<layer number="46" name="Milling" color="3" fill="1" visible="yes" active="no"/>
-<layer number="47" name="Measures" color="7" fill="1" visible="yes" active="no"/>
-<layer number="48" name="Document" color="7" fill="1" visible="yes" active="no"/>
-<layer number="49" name="Reference" color="7" fill="1" visible="yes" active="no"/>
-<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="no"/>
-<layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="no"/>
+<layer number="46" name="Milling" color="3" fill="1" visible="no" active="no"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="no" active="no"/>
+<layer number="48" name="Document" color="7" fill="1" visible="no" active="no"/>
+<layer number="49" name="Reference" color="7" fill="1" visible="no" active="no"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="no" active="no"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="no" active="no"/>
 <layer number="90" name="Modules" color="5" fill="1" visible="yes" active="yes"/>
 <layer number="91" name="Nets" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="92" name="Busses" color="1" fill="1" visible="yes" active="yes"/>
@@ -7916,9 +7916,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <part name="R14" library="resistor" deviceset="R-US_" device="R0805" value="15"/>
 <part name="R15" library="resistor" deviceset="R-US_" device="R0805" value="15"/>
 <part name="R16" library="resistor" deviceset="R-US_" device="R0805" value="70"/>
-<part name="SUPPLY14" library="supply2" deviceset="DGND" device=""/>
 <part name="SUPPLY27" library="supply2" deviceset="DGND" device=""/>
-<part name="SUPPLY28" library="supply2" deviceset="DGND" device=""/>
 <part name="3.3V" library="foe-scale" deviceset="TEST_POINT" device=""/>
 <part name="5V" library="foe-scale" deviceset="TEST_POINT" device=""/>
 <part name="AGND" library="foe-scale" deviceset="TEST_POINT" device=""/>
@@ -7931,6 +7929,9 @@ In this library the device names are the same as the pin names of the symbols, t
 <part name="SUPPLY30" library="supply2" deviceset="DGND" device=""/>
 <part name="C4" library="rcl" deviceset="C-EU" device="C0805K" value="2nF"/>
 <part name="SUPPLY8" library="supply2" deviceset="AGND" device=""/>
+<part name="R17" library="resistor" deviceset="R-US_" device="R0805" value="0"/>
+<part name="SUPPLY14" library="supply2" deviceset="AGND" device=""/>
+<part name="SUPPLY28" library="supply2" deviceset="DGND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -7960,7 +7961,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <instance part="U1" gate="G$1" x="309.88" y="66.04"/>
 <instance part="R9" gate="G$1" x="266.7" y="63.5" rot="R180"/>
 <instance part="C5" gate="G$1" x="276.86" y="60.96"/>
-<instance part="U$7" gate="G$1" x="416.56" y="99.06"/>
+<instance part="U$7" gate="G$1" x="419.1" y="99.06"/>
 <instance part="U$8" gate="G$1" x="83.82" y="0" rot="R90"/>
 <instance part="U2" gate="G$1" x="27.94" y="-76.2"/>
 <instance part="U$11" gate="G$1" x="63.5" y="-48.26" rot="R90"/>
@@ -8025,9 +8026,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <instance part="R14" gate="G$1" x="-5.08" y="-88.9" rot="R180"/>
 <instance part="R15" gate="G$1" x="-2.54" y="-93.98" rot="R180"/>
 <instance part="R16" gate="G$1" x="2.54" y="-99.06" rot="R180"/>
-<instance part="SUPPLY14" gate="G$1" x="391.16" y="76.2"/>
-<instance part="SUPPLY27" gate="G$1" x="391.16" y="76.2"/>
-<instance part="SUPPLY28" gate="G$1" x="340.36" y="-25.4"/>
+<instance part="SUPPLY27" gate="G$1" x="388.62" y="78.74"/>
 <instance part="3.3V" gate="G$1" x="185.42" y="12.7" rot="R270"/>
 <instance part="5V" gate="G$1" x="20.32" y="99.06" rot="R270"/>
 <instance part="AGND" gate="G$1" x="309.88" y="-17.78" rot="R270"/>
@@ -8041,6 +8040,9 @@ In this library the device names are the same as the pin names of the symbols, t
 <instance part="U$3" gate="G$2" x="259.08" y="106.68"/>
 <instance part="C4" gate="G$1" x="312.42" y="124.46"/>
 <instance part="SUPPLY8" gate="G$1" x="312.42" y="116.84"/>
+<instance part="R17" gate="G$1" x="325.12" y="-58.42" rot="R180"/>
+<instance part="SUPPLY14" gate="G$1" x="312.42" y="-63.5"/>
+<instance part="SUPPLY28" gate="G$1" x="337.82" y="-63.5"/>
 </instances>
 <busses>
 </busses>
@@ -8245,7 +8247,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <segment>
 <pinref part="U$6" gate="G$1" pin="SCK"/>
 <pinref part="U$7" gate="G$1" pin="OV_L1"/>
-<wire x1="355.6" y1="109.22" x2="398.78" y2="109.22" width="0.1524" layer="91"/>
+<wire x1="355.6" y1="109.22" x2="401.32" y2="109.22" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$35" class="0">
@@ -8256,7 +8258,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <wire x1="368.3" y1="101.6" x2="381" y2="101.6" width="0.1524" layer="91"/>
 <wire x1="381" y1="101.6" x2="381" y2="104.14" width="0.1524" layer="91"/>
 <pinref part="U$7" gate="G$1" pin="OV_L2"/>
-<wire x1="381" y1="104.14" x2="398.78" y2="104.14" width="0.1524" layer="91"/>
+<wire x1="381" y1="104.14" x2="401.32" y2="104.14" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$36" class="0">
@@ -8265,13 +8267,13 @@ In this library the device names are the same as the pin names of the symbols, t
 <wire x1="355.6" y1="104.14" x2="373.38" y2="104.14" width="0.1524" layer="91"/>
 <wire x1="373.38" y1="104.14" x2="373.38" y2="99.06" width="0.1524" layer="91"/>
 <pinref part="U$7" gate="G$1" pin="IV_L3"/>
-<wire x1="373.38" y1="99.06" x2="398.78" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="373.38" y1="99.06" x2="401.32" y2="99.06" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="SDO-PA09" class="0">
 <segment>
 <pinref part="U$7" gate="G$1" pin="OV_CC3"/>
-<wire x1="434.34" y1="99.06" x2="454.66" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="436.88" y1="99.06" x2="454.66" y2="99.06" width="0.1524" layer="91"/>
 <label x="447.04" y="99.06" size="1.778" layer="95"/>
 </segment>
 <segment>
@@ -8283,9 +8285,8 @@ In this library the device names are the same as the pin names of the symbols, t
 <net name="CONV-PA10" class="0">
 <segment>
 <pinref part="U$7" gate="G$1" pin="IV_CC2"/>
-<wire x1="434.34" y1="104.14" x2="454.66" y2="104.14" width="0.1524" layer="91"/>
 <label x="447.04" y="104.14" size="1.778" layer="95"/>
-<wire x1="434.34" y1="104.14" x2="454.66" y2="104.14" width="0.1524" layer="91"/>
+<wire x1="436.88" y1="104.14" x2="454.66" y2="104.14" width="0.1524" layer="91"/>
 <label x="447.04" y="104.14" size="1.778" layer="95"/>
 </segment>
 <segment>
@@ -8302,7 +8303,7 @@ In this library the device names are the same as the pin names of the symbols, t
 </segment>
 <segment>
 <pinref part="U$7" gate="G$1" pin="IV_CC1"/>
-<wire x1="434.34" y1="109.22" x2="454.66" y2="109.22" width="0.1524" layer="91" style="dashdot"/>
+<wire x1="436.88" y1="109.22" x2="454.66" y2="109.22" width="0.1524" layer="91" style="dashdot"/>
 <label x="449.58" y="109.22" size="1.778" layer="95"/>
 </segment>
 </net>
@@ -8379,9 +8380,6 @@ In this library the device names are the same as the pin names of the symbols, t
 <wire x1="340.36" y1="-17.78" x2="340.36" y2="-22.86" width="0.1524" layer="91"/>
 <label x="340.36" y="-22.86" size="1.778" layer="95" rot="R180"/>
 <pinref part="SUPPLY22" gate="G$1" pin="DGND"/>
-<wire x1="340.36" y1="-22.86" x2="340.36" y2="-25.4" width="0.1524" layer="91"/>
-<junction x="340.36" y="-22.86"/>
-<pinref part="SUPPLY28" gate="G$1" pin="DGND"/>
 <pinref part="DGND" gate="G$1" pin="P$1"/>
 <junction x="337.82" y="-17.78"/>
 </segment>
@@ -8428,16 +8426,14 @@ In this library the device names are the same as the pin names of the symbols, t
 </segment>
 <segment>
 <pinref part="U$7" gate="G$1" pin="IV_L4"/>
-<wire x1="398.78" y1="93.98" x2="391.16" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="401.32" y1="93.98" x2="391.16" y2="93.98" width="0.1524" layer="91"/>
 <wire x1="391.16" y1="93.98" x2="391.16" y2="83.82" width="0.1524" layer="91"/>
 <pinref part="U$7" gate="G$1" pin="GND"/>
-<wire x1="391.16" y1="83.82" x2="398.78" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="391.16" y1="83.82" x2="401.32" y2="83.82" width="0.1524" layer="91"/>
 <junction x="391.16" y="83.82"/>
 <label x="391.16" y="81.28" size="1.778" layer="95"/>
-<wire x1="391.16" y1="83.82" x2="391.16" y2="78.74" width="0.1524" layer="91"/>
-<pinref part="SUPPLY14" gate="G$1" pin="DGND"/>
+<wire x1="391.16" y1="83.82" x2="388.62" y2="81.28" width="0.1524" layer="91"/>
 <pinref part="SUPPLY27" gate="G$1" pin="DGND"/>
-<junction x="391.16" y="78.74"/>
 </segment>
 <segment>
 <pinref part="C11" gate="G$1" pin="2"/>
@@ -8690,14 +8686,13 @@ In this library the device names are the same as the pin names of the symbols, t
 </segment>
 <segment>
 <pinref part="U$7" gate="G$1" pin="V_CC"/>
-<wire x1="434.34" y1="114.3" x2="439.42" y2="114.3" width="0.1524" layer="91" style="dashdot"/>
-<wire x1="439.42" y1="114.3" x2="439.42" y2="127" width="0.1524" layer="91" style="dashdot"/>
+<wire x1="436.88" y1="114.3" x2="439.42" y2="114.3" width="0.1524" layer="91" style="dashdot"/>
+<wire x1="439.42" y1="114.3" x2="439.42" y2="129.54" width="0.1524" layer="91" style="dashdot"/>
 <label x="439.42" y="124.46" size="1.778" layer="95"/>
 <pinref part="+3V8" gate="G$1" pin="+3V3"/>
 <wire x1="439.42" y1="132.08" x2="439.42" y2="129.54" width="0.1524" layer="91" style="dashdot"/>
 <junction x="439.42" y="132.08"/>
 <pinref part="C11" gate="G$1" pin="1"/>
-<wire x1="439.42" y1="129.54" x2="439.42" y2="127" width="0.1524" layer="91" style="dashdot"/>
 <wire x1="439.42" y1="129.54" x2="449.58" y2="129.54" width="0.1524" layer="91" style="dashdot"/>
 <wire x1="449.58" y1="129.54" x2="449.58" y2="127" width="0.1524" layer="91" style="dashdot"/>
 <junction x="439.42" y="129.54"/>
@@ -8779,7 +8774,7 @@ In this library the device names are the same as the pin names of the symbols, t
 </segment>
 <segment>
 <pinref part="U$7" gate="G$1" pin="V_L"/>
-<wire x1="398.78" y1="114.3" x2="388.62" y2="114.3" width="0.1524" layer="91"/>
+<wire x1="401.32" y1="114.3" x2="388.62" y2="114.3" width="0.1524" layer="91"/>
 <wire x1="388.62" y1="114.3" x2="388.62" y2="129.54" width="0.1524" layer="91"/>
 <label x="388.62" y="129.54" size="1.778" layer="95"/>
 <pinref part="P+9" gate="1" pin="+5V"/>
