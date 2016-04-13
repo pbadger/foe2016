@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.5.0">
+<eagle version="7.4.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -7934,6 +7934,9 @@ In this library the device names are the same as the pin names of the symbols, t
 <part name="SUPPLY28" library="supply2" deviceset="DGND" device=""/>
 <part name="U$4" library="foe-scale" deviceset="TEST_POINT" device=""/>
 <part name="U$5" library="foe-scale" deviceset="TEST_POINT" device=""/>
+<part name="R18" library="resistor" deviceset="R-US_" device="R0805" value="0"/>
+<part name="SUPPLY31" library="supply2" deviceset="AGND" device=""/>
+<part name="SUPPLY32" library="supply2" deviceset="DGND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -8047,6 +8050,9 @@ In this library the device names are the same as the pin names of the symbols, t
 <instance part="SUPPLY28" gate="G$1" x="337.82" y="-63.5"/>
 <instance part="U$4" gate="G$1" x="68.58" y="-129.54" rot="R180"/>
 <instance part="U$5" gate="G$1" x="68.58" y="-139.7" rot="R180"/>
+<instance part="R18" gate="G$1" x="325.12" y="-76.2" rot="R180"/>
+<instance part="SUPPLY31" gate="G$1" x="312.42" y="-81.28"/>
+<instance part="SUPPLY32" gate="G$1" x="337.82" y="-81.28"/>
 </instances>
 <busses>
 </busses>
@@ -8449,6 +8455,12 @@ In this library the device names are the same as the pin names of the symbols, t
 <pinref part="SUPPLY28" gate="G$1" pin="DGND"/>
 <wire x1="330.2" y1="-58.42" x2="337.82" y2="-58.42" width="0.1524" layer="91"/>
 <wire x1="337.82" y1="-58.42" x2="337.82" y2="-60.96" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="R18" gate="G$1" pin="1"/>
+<wire x1="330.2" y1="-76.2" x2="337.82" y2="-76.2" width="0.1524" layer="91"/>
+<wire x1="337.82" y1="-76.2" x2="337.82" y2="-78.74" width="0.1524" layer="91"/>
+<pinref part="SUPPLY32" gate="G$1" pin="DGND"/>
 </segment>
 </net>
 <net name="DO-PA16" class="0">
@@ -8948,6 +8960,12 @@ In this library the device names are the same as the pin names of the symbols, t
 <wire x1="312.42" y1="-60.96" x2="312.42" y2="-58.42" width="0.1524" layer="91"/>
 <pinref part="R17" gate="G$1" pin="2"/>
 <wire x1="312.42" y1="-58.42" x2="320.04" y2="-58.42" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="R18" gate="G$1" pin="2"/>
+<wire x1="320.04" y1="-76.2" x2="312.42" y2="-76.2" width="0.1524" layer="91"/>
+<wire x1="312.42" y1="-76.2" x2="312.42" y2="-78.74" width="0.1524" layer="91"/>
+<pinref part="SUPPLY31" gate="G$1" pin="AGND"/>
 </segment>
 </net>
 <net name="N$1" class="0">
