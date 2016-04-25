@@ -1216,6 +1216,74 @@ diameter 2.54 mm, horizontal, grid 10.16 mm</description>
 <wire x1="9" y1="-17" x2="9" y2="3" width="0.127" layer="21"/>
 <wire x1="9" y1="3" x2="-6" y2="3" width="0.127" layer="21"/>
 </package>
+<package name="LTC4120-4.2V">
+<wire x1="-1.5" y1="-1.5" x2="1.5" y2="-1.5" width="0.05" layer="21"/>
+<wire x1="1.5" y1="-1.5" x2="1.5" y2="1.5" width="0.05" layer="21"/>
+<wire x1="1.5" y1="1.5" x2="-1.5" y2="1.5" width="0.05" layer="21"/>
+<wire x1="-1.5" y1="1.5" x2="-1.5" y2="-1.5" width="0.05" layer="21"/>
+<smd name="GND2" x="0" y="0" dx="1.45" dy="1.45" layer="1"/>
+<smd name="INT_VCC" x="-0.75" y="-1.75" dx="0.25" dy="1" layer="1" rot="R180"/>
+<smd name="BOOST" x="-0.25" y="-1.75" dx="0.25" dy="1" layer="1" rot="R180"/>
+<smd name="IN" x="0.25" y="-1.75" dx="0.25" dy="1" layer="1" rot="R180"/>
+<smd name="SW" x="0.75" y="-1.75" dx="0.25" dy="1" layer="1" rot="R180"/>
+<smd name="GND" x="1.75" y="-0.75" dx="0.25" dy="1" layer="1" rot="R270"/>
+<smd name="DHC" x="1.75" y="-0.25" dx="0.25" dy="1" layer="1" rot="R270"/>
+<smd name="FREQ" x="1.75" y="0.25" dx="0.25" dy="1" layer="1" rot="R270"/>
+<smd name="CHGSNS" x="1.75" y="0.75" dx="0.25" dy="1" layer="1" rot="R270"/>
+<smd name="BAT" x="0.75" y="1.75" dx="0.25" dy="1" layer="1"/>
+<smd name="BATSNS" x="0.25" y="1.75" dx="0.25" dy="1" layer="1"/>
+<smd name="NC" x="-0.25" y="1.75" dx="0.25" dy="1" layer="1"/>
+<smd name="NTC" x="-0.75" y="1.75" dx="0.25" dy="1" layer="1"/>
+<smd name="PROG" x="-1.75" y="0.75" dx="0.25" dy="1" layer="1" rot="R90"/>
+<smd name="~CHRG" x="-1.75" y="0.25" dx="0.25" dy="1" layer="1" rot="R90"/>
+<smd name="~FAULT" x="-1.75" y="-0.25" dx="0.25" dy="1" layer="1" rot="R90"/>
+<smd name="RUN" x="-1.75" y="-0.75" dx="0.25" dy="1" layer="1" rot="R90"/>
+<circle x="-0.75" y="-1" radius="0.079071875" width="0.05" layer="21"/>
+</package>
+<package name="TSL250-RD">
+<smd name="NC1" x="-1.5" y="1.995" dx="1" dy="0.33" layer="1"/>
+<smd name="NC2" x="-1.5" y="0.685" dx="1" dy="0.33" layer="1"/>
+<smd name="NC3" x="-1.5" y="-0.685" dx="1" dy="0.33" layer="1"/>
+<smd name="GND" x="-1.5" y="-1.955" dx="1" dy="0.33" layer="1"/>
+<smd name="OUT" x="1.5" y="0.685" dx="1" dy="0.33" layer="1"/>
+<smd name="NC8" x="1.5" y="1.955" dx="1" dy="0.33" layer="1"/>
+<smd name="VDD" x="1.5" y="-0.685" dx="1" dy="0.33" layer="1"/>
+<smd name="NC5" x="1.5" y="-1.955" dx="1" dy="0.33" layer="1"/>
+<wire x1="-1.4" y1="2.6" x2="-1.4" y2="-2.6" width="0.05" layer="21"/>
+<wire x1="-1.4" y1="-2.6" x2="1.4" y2="-2.6" width="0.05" layer="21"/>
+<wire x1="1.4" y1="-2.6" x2="1.4" y2="2.6" width="0.05" layer="21"/>
+<wire x1="1.4" y1="2.6" x2="-1.4" y2="2.6" width="0.05" layer="21"/>
+<circle x="-0.6" y="2" radius="0.2" width="0.05" layer="21"/>
+<text x="2.4" y="4" size="1.27" layer="21">&gt;NAME</text>
+<text x="2.4" y="2.4" size="1.27" layer="21">&gt;VALUE</text>
+</package>
+<package name="LTC1945-QFN">
+<smd name="IN" x="0" y="0" dx="0.25" dy="0.7" layer="1"/>
+<smd name="CTS" x="0.5" y="0" dx="0.25" dy="0.7" layer="1"/>
+<smd name="IS-" x="1" y="0" dx="0.25" dy="0.7" layer="1"/>
+<smd name="IS+" x="1.5" y="0" dx="0.25" dy="0.7" layer="1"/>
+<smd name="IMON" x="2" y="0" dx="0.25" dy="0.7" layer="1"/>
+<smd name="NTC" x="2.5" y="0" dx="0.25" dy="0.7" layer="1"/>
+<smd name="IN1" x="-1.15" y="1.4" dx="0.25" dy="0.7" layer="1" rot="R90"/>
+<smd name="SW1" x="-1.15" y="1.9" dx="0.25" dy="0.7" layer="1" rot="R90"/>
+<smd name="SW2" x="-1.15" y="2.4" dx="0.25" dy="0.7" layer="1" rot="R90"/>
+<smd name="IN2" x="-1.15" y="2.9" dx="0.25" dy="0.7" layer="1" rot="R90"/>
+<smd name="DTH" x="3.65" y="1.4" dx="0.25" dy="0.7" layer="1" rot="R90"/>
+<smd name="STAT" x="3.65" y="1.9" dx="0.25" dy="0.7" layer="1" rot="R90"/>
+<smd name="FTH" x="3.65" y="2.4" dx="0.25" dy="0.7" layer="1" rot="R90"/>
+<smd name="PTH2" x="3.65" y="2.9" dx="0.25" dy="0.7" layer="1" rot="R90"/>
+<smd name="GND" x="0" y="4.1" dx="0.25" dy="0.7" layer="1"/>
+<smd name="~EN" x="0.5" y="4.1" dx="0.25" dy="0.7" layer="1"/>
+<smd name="CTD" x="1" y="4.1" dx="0.25" dy="0.7" layer="1"/>
+<smd name="FB" x="1.5" y="4.1" dx="0.25" dy="0.7" layer="1"/>
+<smd name="PTHM" x="2" y="4.1" dx="0.25" dy="0.7" layer="1"/>
+<smd name="PTH1" x="2.5" y="4.1" dx="0.25" dy="0.7" layer="1"/>
+<wire x1="-1.1" y1="0" x2="3.7" y2="0" width="0.1" layer="21"/>
+<wire x1="3.7" y1="0" x2="3.7" y2="4.1" width="0.1" layer="21"/>
+<wire x1="3.7" y1="4.1" x2="-1.1" y2="4.1" width="0.1" layer="21"/>
+<wire x1="-1.1" y1="4.1" x2="-1.1" y2="0" width="0.1" layer="21"/>
+<circle x="0" y="0.7" radius="0.22360625" width="0.1" layer="21"/>
+</package>
 </packages>
 <symbols>
 <symbol name="LT3581">
@@ -1876,6 +1944,73 @@ Converter with Fault Protection</description>
 <wire x1="-15.24" y1="-10.16" x2="-15.24" y2="15.24" width="0.254" layer="94"/>
 <wire x1="-15.24" y1="15.24" x2="-2.54" y2="15.24" width="0.254" layer="94"/>
 <text x="-5.08" y="12.7" size="1.778" layer="94" rot="R180">USB-B</text>
+</symbol>
+<symbol name="LTC4120">
+<pin name="INT_VCC" x="-7.62" y="7.62" length="middle"/>
+<pin name="BOOST" x="-7.62" y="2.54" length="middle"/>
+<pin name="IN" x="-7.62" y="-2.54" length="middle"/>
+<pin name="SW" x="-7.62" y="-7.62" length="middle"/>
+<pin name="GND" x="5.08" y="-20.32" length="middle" rot="R90"/>
+<pin name="DHC" x="10.16" y="-20.32" length="middle" rot="R90"/>
+<pin name="FREQ" x="15.24" y="-20.32" length="middle" rot="R90"/>
+<pin name="CHGSNS" x="20.32" y="-20.32" length="middle" rot="R90"/>
+<pin name="BAT" x="33.02" y="-7.62" length="middle" rot="R180"/>
+<pin name="BATSNS" x="33.02" y="-2.54" length="middle" rot="R180"/>
+<pin name="NC" x="33.02" y="2.54" length="middle" rot="R180"/>
+<pin name="NTC" x="33.02" y="7.62" length="middle" rot="R180"/>
+<pin name="PROG" x="20.32" y="20.32" length="middle" rot="R270"/>
+<pin name="~CHRG" x="15.24" y="20.32" length="middle" rot="R270"/>
+<pin name="~FAULT" x="10.16" y="20.32" length="middle" rot="R270"/>
+<pin name="RUN" x="5.08" y="20.32" length="middle" rot="R270"/>
+<wire x1="-7.62" y1="20.32" x2="-7.62" y2="-20.32" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="-20.32" x2="33.02" y2="-20.32" width="0.254" layer="94"/>
+<wire x1="33.02" y1="-20.32" x2="33.02" y2="20.32" width="0.254" layer="94"/>
+<wire x1="33.02" y1="20.32" x2="-7.62" y2="20.32" width="0.254" layer="94"/>
+<text x="27.94" y="22.86" size="1.778" layer="94">LTC4120-4.2V</text>
+<pin name="GND2" x="0" y="-20.32" length="middle" rot="R90"/>
+</symbol>
+<symbol name="TSL250RD-LIGHTSENSOR">
+<pin name="NC1" x="-12.7" y="7.62" length="middle"/>
+<pin name="NC2" x="-12.7" y="2.54" length="middle"/>
+<pin name="NC3" x="-12.7" y="-2.54" length="middle"/>
+<pin name="GND" x="-12.7" y="-7.62" length="middle"/>
+<pin name="NC5" x="12.7" y="-7.62" length="middle" rot="R180"/>
+<pin name="VDD" x="12.7" y="-2.54" length="middle" rot="R180"/>
+<pin name="OUT" x="12.7" y="2.54" length="middle" rot="R180"/>
+<pin name="NC8" x="12.7" y="7.62" length="middle" rot="R180"/>
+<wire x1="-12.7" y1="10.16" x2="-12.7" y2="-12.7" width="0.254" layer="94"/>
+<wire x1="-12.7" y1="-12.7" x2="12.7" y2="-12.7" width="0.254" layer="94"/>
+<wire x1="12.7" y1="-12.7" x2="12.7" y2="12.7" width="0.254" layer="94"/>
+<wire x1="12.7" y1="12.7" x2="-12.7" y2="12.7" width="0.254" layer="94"/>
+<wire x1="-12.7" y1="12.7" x2="-12.7" y2="10.16" width="0.254" layer="94"/>
+<text x="-7.62" y="10.16" size="1.778" layer="94">TSL250-RD</text>
+</symbol>
+<symbol name="LTC1425-POWERTRANSMITTER">
+<pin name="IN" x="-17.78" y="12.7" length="middle"/>
+<pin name="CTS" x="-17.78" y="7.62" length="middle"/>
+<pin name="IS-" x="-17.78" y="2.54" length="middle"/>
+<pin name="IS+" x="-17.78" y="-2.54" length="middle"/>
+<pin name="IMON" x="-17.78" y="-7.62" length="middle"/>
+<pin name="NTC" x="-17.78" y="-12.7" length="middle"/>
+<pin name="DTH" x="-5.08" y="-20.32" length="middle" rot="R90"/>
+<pin name="STAT" x="0" y="-20.32" length="middle" rot="R90"/>
+<pin name="FTH" x="5.08" y="-20.32" length="middle" rot="R90"/>
+<pin name="PTH2" x="10.16" y="-20.32" length="middle" rot="R90"/>
+<pin name="PTH1" x="22.86" y="-12.7" length="middle" rot="R180"/>
+<pin name="PTHM" x="22.86" y="-7.62" length="middle" rot="R180"/>
+<pin name="FB" x="22.86" y="-2.54" length="middle" rot="R180"/>
+<pin name="CTD" x="22.86" y="2.54" length="middle" rot="R180"/>
+<pin name="~EN" x="22.86" y="7.62" length="middle" rot="R180"/>
+<pin name="GND" x="22.86" y="12.7" length="middle" rot="R180"/>
+<pin name="IN2" x="10.16" y="20.32" length="middle" rot="R270"/>
+<pin name="SW2" x="5.08" y="20.32" length="middle" rot="R270"/>
+<pin name="SW1" x="0" y="20.32" length="middle" rot="R270"/>
+<pin name="IN1" x="-5.08" y="20.32" length="middle" rot="R270"/>
+<wire x1="-17.78" y1="-20.32" x2="22.86" y2="-20.32" width="0.254" layer="94"/>
+<wire x1="22.86" y1="-20.32" x2="22.86" y2="20.32" width="0.254" layer="94"/>
+<wire x1="22.86" y1="20.32" x2="-17.78" y2="20.32" width="0.254" layer="94"/>
+<wire x1="-17.78" y1="20.32" x2="-17.78" y2="-20.32" width="0.254" layer="94"/>
+<text x="0" y="2.54" size="1.778" layer="94">LTC4125</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -2691,6 +2826,93 @@ Short pins 3 and 4 together...</description>
 <connect gate="G$1" pin="D-" pad="D-"/>
 <connect gate="G$1" pin="GND" pad="GND"/>
 <connect gate="G$1" pin="VBUS" pad="VBUS"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="LTC4120-4.2V">
+<gates>
+<gate name="G$1" symbol="LTC4120" x="-12.7" y="0"/>
+</gates>
+<devices>
+<device name="" package="LTC4120-4.2V">
+<connects>
+<connect gate="G$1" pin="BAT" pad="BAT"/>
+<connect gate="G$1" pin="BATSNS" pad="BATSNS"/>
+<connect gate="G$1" pin="BOOST" pad="BOOST"/>
+<connect gate="G$1" pin="CHGSNS" pad="CHGSNS"/>
+<connect gate="G$1" pin="DHC" pad="DHC"/>
+<connect gate="G$1" pin="FREQ" pad="FREQ"/>
+<connect gate="G$1" pin="GND" pad="GND"/>
+<connect gate="G$1" pin="GND2" pad="GND2"/>
+<connect gate="G$1" pin="IN" pad="IN"/>
+<connect gate="G$1" pin="INT_VCC" pad="INT_VCC"/>
+<connect gate="G$1" pin="NC" pad="NC"/>
+<connect gate="G$1" pin="NTC" pad="NTC"/>
+<connect gate="G$1" pin="PROG" pad="PROG"/>
+<connect gate="G$1" pin="RUN" pad="RUN"/>
+<connect gate="G$1" pin="SW" pad="SW"/>
+<connect gate="G$1" pin="~CHRG" pad="~CHRG"/>
+<connect gate="G$1" pin="~FAULT" pad="~FAULT"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="TSL250-RD">
+<gates>
+<gate name="G$1" symbol="TSL250RD-LIGHTSENSOR" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="TSL250-RD">
+<connects>
+<connect gate="G$1" pin="GND" pad="GND"/>
+<connect gate="G$1" pin="NC1" pad="NC1"/>
+<connect gate="G$1" pin="NC2" pad="NC2"/>
+<connect gate="G$1" pin="NC3" pad="NC3"/>
+<connect gate="G$1" pin="NC5" pad="NC5"/>
+<connect gate="G$1" pin="NC8" pad="NC8"/>
+<connect gate="G$1" pin="OUT" pad="OUT"/>
+<connect gate="G$1" pin="VDD" pad="VDD"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="LTC4125">
+<gates>
+<gate name="G$1" symbol="LTC1425-POWERTRANSMITTER" x="2.54" y="5.08"/>
+</gates>
+<devices>
+<device name="" package="LTC1945-QFN">
+<connects>
+<connect gate="G$1" pin="CTD" pad="CTD"/>
+<connect gate="G$1" pin="CTS" pad="CTS"/>
+<connect gate="G$1" pin="DTH" pad="DTH"/>
+<connect gate="G$1" pin="FB" pad="FB"/>
+<connect gate="G$1" pin="FTH" pad="FTH"/>
+<connect gate="G$1" pin="GND" pad="GND"/>
+<connect gate="G$1" pin="IMON" pad="IMON"/>
+<connect gate="G$1" pin="IN" pad="IN"/>
+<connect gate="G$1" pin="IN1" pad="IN1"/>
+<connect gate="G$1" pin="IN2" pad="IN2"/>
+<connect gate="G$1" pin="IS+" pad="IS+"/>
+<connect gate="G$1" pin="IS-" pad="IS-"/>
+<connect gate="G$1" pin="NTC" pad="NTC"/>
+<connect gate="G$1" pin="PTH1" pad="PTH1"/>
+<connect gate="G$1" pin="PTH2" pad="PTH2"/>
+<connect gate="G$1" pin="PTHM" pad="PTHM"/>
+<connect gate="G$1" pin="STAT" pad="STAT"/>
+<connect gate="G$1" pin="SW1" pad="SW1"/>
+<connect gate="G$1" pin="SW2" pad="SW2"/>
+<connect gate="G$1" pin="~EN" pad="~EN"/>
 </connects>
 <technologies>
 <technology name=""/>
