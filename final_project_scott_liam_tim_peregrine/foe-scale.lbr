@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -1284,6 +1284,51 @@ diameter 2.54 mm, horizontal, grid 10.16 mm</description>
 <wire x1="-1.1" y1="4.1" x2="-1.1" y2="0" width="0.1" layer="21"/>
 <circle x="0" y="0.7" radius="0.22360625" width="0.1" layer="21"/>
 </package>
+<package name="PT17-21B_PHOTOTRANSISTOR">
+<wire x1="0" y1="0" x2="2.4" y2="0" width="0.05" layer="21"/>
+<wire x1="0" y1="1.25" x2="2.4" y2="1.25" width="0.05" layer="21"/>
+<wire x1="2.4" y1="1.25" x2="2.4" y2="0" width="0.05" layer="21"/>
+<wire x1="0" y1="0" x2="0" y2="1.25" width="0.05" layer="21"/>
+<smd name="COLLECTOR" x="0.305959375" y="0.61641875" dx="0.6" dy="1.25" layer="1" rot="R180"/>
+<smd name="EMITTER" x="2.087725" y="0.629915625" dx="0.6" dy="1.25" layer="1" rot="R180"/>
+<text x="3.25" y="3.75" size="1.27" layer="1">&gt;NAME</text>
+<text x="3.25" y="2.25" size="1.27" layer="1">&gt;VALUE</text>
+<text x="0.7914" y="0.911309375" size="0.254" layer="1">C</text>
+<text x="1.42691875" y="0.095928125" size="0.254" layer="1">E</text>
+</package>
+<package name="BAS521-V-DIODE">
+<wire x1="-1" y1="-0.35" x2="1" y2="-0.35" width="0.05" layer="21"/>
+<wire x1="1" y1="-0.35" x2="1" y2="0.35" width="0.05" layer="21"/>
+<wire x1="1" y1="0.35" x2="-1" y2="0.35" width="0.05" layer="21"/>
+<wire x1="-1" y1="0.35" x2="-1" y2="-0.35" width="0.05" layer="21"/>
+<smd name="ANODE" x="-0.7112" y="0" dx="0.6" dy="0.7" layer="1"/>
+<smd name="CATHODE" x="0.6858" y="0" dx="0.6" dy="0.7" layer="1"/>
+<polygon width="0.05" layer="21">
+<vertex x="-0.2" y="0.2"/>
+<vertex x="-0.2" y="-0.2"/>
+<vertex x="0.2" y="0"/>
+</polygon>
+<wire x1="0.2" y1="0.2" x2="0.2" y2="-0.2" width="0.05" layer="21"/>
+<text x="1.8" y="1" size="1.27" layer="21">&gt;NAME</text>
+<text x="1.8" y="-0.6" size="1.27" layer="21">&gt;VALUE</text>
+</package>
+<package name="LTST-C193KGKT_GREEN-LED">
+<wire x1="-0.8" y1="-0.4" x2="0.8" y2="-0.4" width="0.05" layer="21"/>
+<wire x1="0.8" y1="-0.4" x2="0.8" y2="0.4" width="0.05" layer="21"/>
+<wire x1="0.8" y1="0.4" x2="-0.8" y2="0.4" width="0.05" layer="21"/>
+<wire x1="-0.8" y1="0.4" x2="-0.8" y2="-0.4" width="0.05" layer="21"/>
+<smd name="ANODE" x="-0.8" y="0" dx="0.6" dy="0.8" layer="1"/>
+<smd name="CATHODE" x="0.8" y="0" dx="0.6" dy="0.8" layer="1"/>
+<polygon width="0.05" layer="21">
+<vertex x="-0.3" y="0.3"/>
+<vertex x="-0.3" y="-0.3"/>
+<vertex x="0.3" y="0"/>
+</polygon>
+<wire x1="0.3" y1="0.3" x2="0.3" y2="-0.3" width="0.05" layer="21"/>
+<text x="0.04068125" y="-0.34579375" size="0.2" layer="21">G</text>
+<text x="1.5" y="0.9" size="0.5" layer="21">&gt;NAME</text>
+<text x="1.5" y="0.3" size="0.5" layer="21">&gt;VALUE</text>
+</package>
 </packages>
 <symbols>
 <symbol name="LT3581">
@@ -2011,6 +2056,75 @@ Converter with Fault Protection</description>
 <wire x1="22.86" y1="20.32" x2="-17.78" y2="20.32" width="0.254" layer="94"/>
 <wire x1="-17.78" y1="20.32" x2="-17.78" y2="-20.32" width="0.254" layer="94"/>
 <text x="0" y="2.54" size="1.778" layer="94">LTC4125</text>
+</symbol>
+<symbol name="PT17-21B_PHOTOTRANSISTOR">
+<pin name="EMITTER" x="0" y="-12.7" length="middle"/>
+<pin name="COLLECTOR" x="0" y="12.7" length="middle"/>
+<circle x="0" y="0" radius="5.6796125" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="1.27" x2="-2.54" y2="1.016" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="1.016" x2="-2.54" y2="-1.016" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="-1.016" x2="-2.54" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="1.016" x2="0" y2="5.08" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="-1.016" x2="0" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="-10.16" y1="7.62" x2="-8.89" y2="6.35" width="0.254" layer="94"/>
+<wire x1="-8.89" y1="6.35" x2="-9.398" y2="5.842" width="0.254" layer="94"/>
+<wire x1="-9.398" y1="5.842" x2="-8.128" y2="4.572" width="0.254" layer="94"/>
+<wire x1="-11.176" y1="5.588" x2="-9.906" y2="4.318" width="0.254" layer="94"/>
+<wire x1="-9.906" y1="4.318" x2="-10.414" y2="3.81" width="0.254" layer="94"/>
+<wire x1="-10.414" y1="3.81" x2="-8.89" y2="2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="12.7" x2="0" y2="5.08" width="0.254" layer="94"/>
+<wire x1="0" y1="-5.08" x2="0" y2="-12.7" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="4.064" x2="-2.54" y2="1.27" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="1.016" x2="-2.54" y2="-3.81" width="0.254" layer="94"/>
+<text x="7.62" y="2.54" size="2.54" layer="94">PT17-21B</text>
+</symbol>
+<symbol name="BS521-HIGH-V-DIODE">
+<pin name="ANODE" x="0" y="7.62" length="middle"/>
+<pin name="CATHODE" x="0" y="-7.62" length="middle"/>
+<polygon width="0.254" layer="94">
+<vertex x="-2.54" y="2.54"/>
+<vertex x="2.54" y="2.54"/>
+<vertex x="0" y="-2.54"/>
+</polygon>
+<wire x1="-2.54" y1="-2.54" x2="0" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="-2.54" x2="2.54" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="-2.54" x2="0" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="0" y1="2.54" x2="0" y2="7.62" width="0.254" layer="94"/>
+<wire x1="0" y1="7.62" x2="-5.08" y2="7.62" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="7.62" x2="-5.08" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="-7.62" x2="5.08" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="5.08" y1="-7.62" x2="5.08" y2="7.62" width="0.254" layer="94"/>
+<wire x1="5.08" y1="7.62" x2="0" y2="7.62" width="0.254" layer="94"/>
+<text x="7.62" y="2.54" size="1.778" layer="94">DS32175</text>
+</symbol>
+<symbol name="LTST-C193KGKT_GREEN-LED">
+<pin name="ANODE" x="0" y="10.16" length="middle"/>
+<pin name="CATHODE" x="0" y="-7.62" length="middle"/>
+<wire x1="-5.08" y1="-2.54" x2="0" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="-2.54" x2="5.08" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="10.16" x2="-5.08" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="-2.54" x2="-5.08" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="-7.62" x2="0" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="0" y1="-7.62" x2="5.08" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="5.08" y1="-7.62" x2="5.08" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="5.08" y1="-2.54" x2="5.08" y2="10.16" width="0.254" layer="94"/>
+<wire x1="5.08" y1="10.16" x2="0" y2="10.16" width="0.254" layer="94"/>
+<polygon width="0.254" layer="94">
+<vertex x="-5.08" y="5.08"/>
+<vertex x="5.08" y="5.08"/>
+<vertex x="0" y="-2.54"/>
+</polygon>
+<wire x1="0" y1="10.16" x2="-5.08" y2="10.16" width="0.254" layer="94"/>
+<wire x1="7.62" y1="2.54" x2="10.16" y2="0" width="0.254" layer="94"/>
+<wire x1="10.16" y1="0" x2="11.176" y2="1.016" width="0.254" layer="94"/>
+<wire x1="11.176" y1="1.016" x2="13.462" y2="-1.524" width="0.254" layer="94"/>
+<wire x1="7.62" y1="0" x2="10.16" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="10.16" y1="-2.54" x2="11.43" y2="-1.016" width="0.254" layer="94"/>
+<wire x1="11.43" y1="-1.016" x2="13.97" y2="-3.302" width="0.254" layer="94"/>
+<text x="10.16" y="2.54" size="1.778" layer="94">G</text>
+<wire x1="0" y1="10.16" x2="0" y2="5.08" width="0.254" layer="94"/>
+<wire x1="0" y1="-2.54" x2="0" y2="-7.62" width="0.254" layer="94"/>
+<text x="5.08" y="12.7" size="2.54" layer="94">LTST-C193KGKT GREEN LED</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -2914,6 +3028,50 @@ Short pins 3 and 4 together...</description>
 <connect gate="G$1" pin="SW2" pad="SW2"/>
 <connect gate="G$1" pin="~EN" pad="~EN"/>
 </connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="PT17-21B_PHOTOTRANSISTOR">
+<gates>
+<gate name="G$1" symbol="PT17-21B_PHOTOTRANSISTOR" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="PT17-21B_PHOTOTRANSISTOR">
+<connects>
+<connect gate="G$1" pin="COLLECTOR" pad="COLLECTOR"/>
+<connect gate="G$1" pin="EMITTER" pad="EMITTER"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="BAS521">
+<gates>
+<gate name="G$1" symbol="BS521-HIGH-V-DIODE" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="BAS521-V-DIODE">
+<connects>
+<connect gate="G$1" pin="ANODE" pad="ANODE"/>
+<connect gate="G$1" pin="CATHODE" pad="CATHODE"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="LTST-C193KGKT_GREEN-LED">
+<gates>
+<gate name="G$1" symbol="LTST-C193KGKT_GREEN-LED" x="0" y="-2.54"/>
+</gates>
+<devices>
+<device name="" package="LTST-C193KGKT_GREEN-LED">
 <technologies>
 <technology name=""/>
 </technologies>
