@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.003125" unitdist="mic" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.000123031496" altunitdist="mil" altunit="mil"/>
+<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -1394,6 +1394,11 @@ diameter 2.54 mm, horizontal, grid 10.16 mm</description>
 <wire x1="3.16079375" y1="1.14790625" x2="3.16079375" y2="-1.042834375" width="0.127" layer="21"/>
 <wire x1="3.16079375" y1="-1.042834375" x2="3.174965625" y2="-1.077046875" width="0.127" layer="21" curve="45"/>
 </package>
+<package name="BUZZER">
+<pad name="-" x="0" y="0" drill="1"/>
+<pad name="+" x="0" y="7.6" drill="1"/>
+<circle x="0" y="3.8" radius="6.01535" width="0.127" layer="21"/>
+</package>
 </packages>
 <symbols>
 <symbol name="LT3581">
@@ -2222,6 +2227,18 @@ Converter with Fault Protection</description>
 <wire x1="0" y1="0" x2="0" y2="-2.54" width="0.254" layer="94"/>
 <pin name="A" x="0" y="5.08" length="point" rot="R90"/>
 <pin name="C" x="0" y="-2.54" length="point" rot="R270"/>
+</symbol>
+<symbol name="BUZZER">
+<wire x1="0" y1="0" x2="0" y2="1.524" width="0.254" layer="94"/>
+<wire x1="2.54" y1="0" x2="2.54" y2="1.524" width="0.254" layer="94"/>
+<wire x1="-1.524" y1="3.556" x2="4.064" y2="3.556" width="0.254" layer="94"/>
+<wire x1="0" y1="0" x2="-2.54" y2="0" width="0.254" layer="94"/>
+<wire x1="2.54" y1="0" x2="5.08" y2="0" width="0.254" layer="94"/>
+<wire x1="-1.524" y1="3.556" x2="0.762" y2="1.27" width="0.254" layer="94" curve="90"/>
+<wire x1="0.762" y1="1.27" x2="1.778" y2="1.27" width="0.254" layer="94"/>
+<wire x1="1.778" y1="1.27" x2="4.064" y2="3.556" width="0.254" layer="94" curve="90"/>
+<pin name="-" x="-2.54" y="0" length="point" rot="R180"/>
+<pin name="+" x="5.08" y="0" length="point"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -3217,6 +3234,22 @@ Short pins 3 and 4 together...</description>
 <connects>
 <connect gate="G$1" pin="A" pad="A"/>
 <connect gate="G$1" pin="C" pad="C"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="BUZZER">
+<gates>
+<gate name="G$1" symbol="BUZZER" x="-2.54" y="0"/>
+</gates>
+<devices>
+<device name="" package="BUZZER">
+<connects>
+<connect gate="G$1" pin="+" pad="+"/>
+<connect gate="G$1" pin="-" pad="-"/>
 </connects>
 <technologies>
 <technology name=""/>
