@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.5.0">
+<eagle version="7.4.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.05" unitdist="inch" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="mm"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -1292,20 +1292,20 @@ diameter 2.54 mm, horizontal, grid 10.16 mm</description>
 <wire x1="0" y1="1.25" x2="2.4" y2="1.25" width="0.05" layer="21"/>
 <wire x1="2.4" y1="1.25" x2="2.4" y2="0" width="0.05" layer="21"/>
 <wire x1="0" y1="0" x2="0" y2="1.25" width="0.05" layer="21"/>
-<smd name="COLLECTOR" x="0.305959375" y="0.61641875" dx="0.6" dy="1.25" layer="1" rot="R180"/>
-<smd name="EMITTER" x="2.087725" y="0.629915625" dx="0.6" dy="1.25" layer="1" rot="R180"/>
+<smd name="COLLECTOR" x="-0.19405" y="0.61641875" dx="1.6" dy="1.25" layer="1" rot="R180"/>
+<smd name="EMITTER" x="2.587725" y="0.629915625" dx="1.6" dy="1.25" layer="1" rot="R180"/>
 <text x="3.25" y="3.75" size="1.27" layer="1">&gt;NAME</text>
 <text x="3.25" y="2.25" size="1.27" layer="1">&gt;VALUE</text>
-<text x="0.7914" y="0.911309375" size="0.254" layer="1">C</text>
-<text x="1.42691875" y="0.095928125" size="0.254" layer="1">E</text>
+<text x="0.7914" y="0.911309375" size="0.254" layer="21">C</text>
+<text x="1.42691875" y="0.095928125" size="0.254" layer="21">E</text>
 </package>
 <package name="BAS521-V-DIODE">
 <wire x1="-1" y1="-0.35" x2="1" y2="-0.35" width="0.05" layer="21"/>
 <wire x1="1" y1="-0.35" x2="1" y2="0.35" width="0.05" layer="21"/>
 <wire x1="1" y1="0.35" x2="-1" y2="0.35" width="0.05" layer="21"/>
 <wire x1="-1" y1="0.35" x2="-1" y2="-0.35" width="0.05" layer="21"/>
-<smd name="ANODE" x="-0.7112" y="0" dx="0.6" dy="0.7" layer="1"/>
-<smd name="CATHODE" x="0.6858" y="0" dx="0.6" dy="0.7" layer="1"/>
+<smd name="ANODE" x="-1.2112" y="0" dx="1.6" dy="0.7" layer="1"/>
+<smd name="CATHODE" x="1.1858" y="0" dx="1.6" dy="0.7" layer="1"/>
 <polygon width="0.05" layer="21">
 <vertex x="-0.2" y="0.2"/>
 <vertex x="-0.2" y="-0.2"/>
@@ -1407,6 +1407,8 @@ diameter 2.54 mm, horizontal, grid 10.16 mm</description>
 <wire x1="11.85" y1="-6.4" x2="11.85" y2="6.4" width="0.127" layer="21"/>
 <wire x1="11.85" y1="6.4" x2="-0.95" y2="6.4" width="0.127" layer="21"/>
 <wire x1="-0.95" y1="6.4" x2="-0.95" y2="-6.4" width="0.127" layer="21"/>
+<text x="12.7" y="5.08" size="1.27" layer="21">&gt;VALUE</text>
+<text x="12.7" y="3.81" size="1.27" layer="21">&gt;NAME</text>
 </package>
 <package name="POWERDI123">
 <wire x1="0.5" y1="0.4" x2="3.5" y2="0.4" width="0.127" layer="21"/>
@@ -1415,8 +1417,8 @@ diameter 2.54 mm, horizontal, grid 10.16 mm</description>
 <wire x1="0.5" y1="-1.8" x2="0.5" y2="0.4" width="0.127" layer="21"/>
 <text x="5" y="1" size="1.27" layer="1">&gt;NAME</text>
 <text x="5.635" y="-0.6" size="1.27" layer="1">&gt;VALUE</text>
-<smd name="P$1" x="3.9" y="-0.7" dx="1.4" dy="1.3" layer="1"/>
-<smd name="P$2" x="0.9" y="-0.7" dx="2.7" dy="1.4" layer="1"/>
+<smd name="A" x="4.4" y="-0.7" dx="2.4" dy="1.3" layer="1"/>
+<smd name="C" x="0.4" y="-0.7" dx="3.7" dy="1.4" layer="1"/>
 </package>
 <package name="SOD-523">
 <smd name="P$1" x="-0.2" y="0" dx="0.8" dy="0.4" layer="1"/>
@@ -2259,6 +2261,15 @@ Converter with Fault Protection</description>
 <wire x1="0" y1="0" x2="0" y2="-2.54" width="0.254" layer="94"/>
 <pin name="A" x="0" y="5.08" length="point" rot="R90"/>
 <pin name="C" x="0" y="-2.54" length="point" rot="R270"/>
+<wire x1="4.064" y1="1.016" x2="5.08" y2="0" width="0.254" layer="94"/>
+<wire x1="5.08" y1="0" x2="5.08" y2="0.508" width="0.254" layer="94"/>
+<wire x1="5.08" y1="0.508" x2="6.096" y2="-0.508" width="0.254" layer="94"/>
+<wire x1="3.81" y1="0.254" x2="4.826" y2="-0.762" width="0.254" layer="94"/>
+<wire x1="4.826" y1="-0.762" x2="4.826" y2="-0.254" width="0.254" layer="94"/>
+<wire x1="4.826" y1="-0.254" x2="5.842" y2="-1.27" width="0.254" layer="94"/>
+<wire x1="3.556" y1="-0.508" x2="4.826" y2="-1.778" width="0.254" layer="94"/>
+<wire x1="4.826" y1="-1.778" x2="4.826" y2="-1.27" width="0.254" layer="94"/>
+<wire x1="4.826" y1="-1.27" x2="5.842" y2="-2.286" width="0.254" layer="94"/>
 </symbol>
 <symbol name="BUZZER">
 <wire x1="0" y1="0" x2="0" y2="1.524" width="0.254" layer="94"/>
@@ -3360,8 +3371,8 @@ Short pins 3 and 4 together...</description>
 <devices>
 <device name="" package="POWERDI123">
 <connects>
-<connect gate="G$1" pin="A" pad="P$1"/>
-<connect gate="G$1" pin="C" pad="P$2"/>
+<connect gate="G$1" pin="A" pad="A"/>
+<connect gate="G$1" pin="C" pad="C"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -3378,6 +3389,22 @@ Short pins 3 and 4 together...</description>
 <connects>
 <connect gate="G$1" pin="A" pad="P$1"/>
 <connect gate="G$1" pin="C" pad="CATHODE"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="POWERZENER">
+<gates>
+<gate name="G$1" symbol="ZD" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="POWERDI123">
+<connects>
+<connect gate="G$1" pin="A" pad="A"/>
+<connect gate="G$1" pin="C" pad="C"/>
 </connects>
 <technologies>
 <technology name=""/>
