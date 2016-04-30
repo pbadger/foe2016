@@ -2217,16 +2217,16 @@ Converter with Fault Protection</description>
 <vertex x="0" y="-2.54"/>
 </polygon>
 <wire x1="0" y1="10.16" x2="-5.08" y2="10.16" width="0.254" layer="94"/>
-<wire x1="7.62" y1="2.54" x2="10.16" y2="0" width="0.254" layer="94"/>
-<wire x1="10.16" y1="0" x2="11.176" y2="1.016" width="0.254" layer="94"/>
-<wire x1="11.176" y1="1.016" x2="13.462" y2="-1.524" width="0.254" layer="94"/>
-<wire x1="7.62" y1="0" x2="10.16" y2="-2.54" width="0.254" layer="94"/>
-<wire x1="10.16" y1="-2.54" x2="11.43" y2="-1.016" width="0.254" layer="94"/>
-<wire x1="11.43" y1="-1.016" x2="13.97" y2="-3.302" width="0.254" layer="94"/>
-<text x="10.16" y="2.54" size="1.778" layer="94">G</text>
+<wire x1="5.842" y1="3.302" x2="8.382" y2="0.762" width="0.254" layer="94"/>
+<wire x1="8.382" y1="0.762" x2="9.398" y2="1.778" width="0.254" layer="94"/>
+<wire x1="9.398" y1="1.778" x2="11.684" y2="-0.762" width="0.254" layer="94"/>
+<wire x1="5.842" y1="0.762" x2="8.382" y2="-1.778" width="0.254" layer="94"/>
+<wire x1="8.382" y1="-1.778" x2="9.652" y2="-0.254" width="0.254" layer="94"/>
+<wire x1="9.652" y1="-0.254" x2="12.192" y2="-2.54" width="0.254" layer="94"/>
+<text x="8.382" y="3.302" size="1.778" layer="94">G</text>
 <wire x1="0" y1="10.16" x2="0" y2="5.08" width="0.254" layer="94"/>
 <wire x1="0" y1="-2.54" x2="0" y2="-7.62" width="0.254" layer="94"/>
-<text x="5.08" y="12.7" size="2.54" layer="94">LTST-C193KGKT GREEN LED</text>
+<text x="-6.096" y="-1.524" size="1.27" layer="94" rot="R90">LTST-C193KGKT GREEN LED</text>
 </symbol>
 <symbol name="NPN">
 <wire x1="0" y1="5.08" x2="0" y2="3.556" width="0.254" layer="94"/>
@@ -3254,6 +3254,10 @@ Short pins 3 and 4 together...</description>
 </gates>
 <devices>
 <device name="" package="LTST-C193KGKT_GREEN-LED">
+<connects>
+<connect gate="G$1" pin="ANODE" pad="ANODE"/>
+<connect gate="G$1" pin="CATHODE" pad="CATHODE"/>
+</connects>
 <technologies>
 <technology name=""/>
 </technologies>
