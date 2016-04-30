@@ -525,25 +525,24 @@
 <text x="7.62" y="2.54" size="2.54" layer="94">PT17-21B</text>
 </symbol>
 <symbol name="LTST-C193KGKT_GREEN-LED">
-<pin name="ANODE" x="0.042" y="4.358" length="middle"/>
-<pin name="CATHODE" x="0.052" y="-2.55" length="middle"/>
 <text x="3.08" y="6.7" size="1.3" layer="94">LTST-C193KGKT GREEN LED</text>
+<pin name="A" x="2.54" y="5.08" length="middle"/>
+<pin name="C" x="2.54" y="-5.08" length="middle"/>
 <polygon width="0.254" layer="94">
-<vertex x="-1" y="1"/>
-<vertex x="1" y="1"/>
-<vertex x="0" y="-1"/>
+<vertex x="0" y="2.54"/>
+<vertex x="5.08" y="2.54"/>
+<vertex x="2.54" y="-2.54"/>
 </polygon>
-<wire x1="1.71" y1="0.46" x2="2.35" y2="-0.12" width="0.254" layer="94"/>
-<wire x1="2.35" y1="-0.12" x2="2.62" y2="0.15" width="0.254" layer="94"/>
-<wire x1="2.62" y1="0.15" x2="3.2" y2="-0.37" width="0.254" layer="94"/>
-<wire x1="1.59" y1="-0.12" x2="2.26" y2="-0.73" width="0.254" layer="94"/>
-<wire x1="2.26" y1="-0.73" x2="2.56" y2="-0.46" width="0.254" layer="94"/>
-<wire x1="2.56" y1="-0.46" x2="3.14" y2="-0.95" width="0.254" layer="94"/>
-<wire x1="-0.762" y1="-1.27" x2="0" y2="-1.27" width="0.254" layer="94"/>
-<wire x1="0" y1="-1.27" x2="1.016" y2="-1.27" width="0.254" layer="94"/>
-<wire x1="0" y1="-1.27" x2="0" y2="-2.54" width="0.254" layer="94"/>
-<wire x1="0.254" y1="4.318" x2="0" y2="4.318" width="0.254" layer="94"/>
-<wire x1="0" y1="4.318" x2="0" y2="1.016" width="0.254" layer="94"/>
+<wire x1="0" y1="-2.54" x2="2.54" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="2.54" y1="-2.54" x2="5.08" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="2.54" y1="-2.54" x2="2.54" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="2.54" y1="2.54" x2="2.54" y2="5.08" width="0.254" layer="94"/>
+<wire x1="6.35" y1="1.524" x2="7.62" y2="0" width="0.254" layer="94"/>
+<wire x1="7.62" y1="0" x2="7.112" y2="-0.508" width="0.254" layer="94"/>
+<wire x1="7.112" y1="-0.508" x2="8.382" y2="-1.778" width="0.254" layer="94"/>
+<wire x1="5.588" y1="0.508" x2="6.604" y2="-0.762" width="0.254" layer="94"/>
+<wire x1="6.604" y1="-0.762" x2="5.842" y2="-1.27" width="0.254" layer="94"/>
+<wire x1="5.842" y1="-1.27" x2="7.366" y2="-2.54" width="0.254" layer="94"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -798,8 +797,8 @@
 <devices>
 <device name="" package="LTST-C193KGKT_GREEN-LED">
 <connects>
-<connect gate="G$1" pin="ANODE" pad="ANODE"/>
-<connect gate="G$1" pin="CATHODE" pad="CATHODE"/>
+<connect gate="G$1" pin="A" pad="ANODE"/>
+<connect gate="G$1" pin="C" pad="CATHODE"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -12300,7 +12299,6 @@ Metric Code Size 2012</description>
 <part name="U$1" library="foe-scale" deviceset="LTC4125" device=""/>
 <part name="U1" library="foe-scale" deviceset="SAMD21E" device=""/>
 <part name="DBG1" library="foe-scale" deviceset="DEBUGHEAD" device=""/>
-<part name="R1" library="resistor" deviceset="R-US_" device="R0805"/>
 <part name="C2" library="resistor" deviceset="C-EU" device="C0805K" value="100nF"/>
 <part name="U2" library="foe-scale" deviceset="3.3V_AS1363" device=""/>
 <part name="C3" library="resistor" deviceset="C-EU" device="C0805K"/>
@@ -12386,12 +12384,12 @@ Metric Code Size 2012</description>
 <text x="167.64" y="-40.64" size="1.778" layer="91">Phototransistor for IR LED from car charger</text>
 <text x="137.16" y="96.52" size="1.778" layer="91">Pins for transmit coil</text>
 <text x="93.98" y="35.56" size="1.778" layer="91">HIGH VOLTAGE CAP</text>
+<text x="191.262" y="-32.004" size="1.778" layer="91">ALIGNED</text>
 </plain>
 <instances>
 <instance part="U$1" gate="G$1" x="38.1" y="63.5" rot="R270"/>
 <instance part="U1" gate="G$1" x="22.86" y="-35.56"/>
 <instance part="DBG1" gate="G$1" x="-76.2" y="-48.26" rot="R270"/>
-<instance part="R1" gate="G$1" x="-55.88" y="48.26"/>
 <instance part="C2" gate="G$1" x="38.1" y="-7.62"/>
 <instance part="U2" gate="AS1363" x="-73.66" y="15.24"/>
 <instance part="C3" gate="G$1" x="-106.68" y="20.32"/>
@@ -12469,7 +12467,7 @@ Metric Code Size 2012</description>
 <instance part="R15" gate="G$1" x="208.28" y="-22.86" rot="R90"/>
 <instance part="SUPPLY35" gate="G$1" x="208.28" y="-10.16"/>
 <instance part="U$11" gate="G$1" x="137.16" y="88.9"/>
-<instance part="U$9" gate="G$1" x="10.16" y="83.82"/>
+<instance part="U$9" gate="G$1" x="7.62" y="78.74"/>
 </instances>
 <busses>
 </busses>
@@ -12625,6 +12623,15 @@ Metric Code Size 2012</description>
 <pinref part="U$10" gate="G$1" pin="EMITTER"/>
 <wire x1="208.28" y1="-60.96" x2="208.28" y2="-68.58" width="0.1524" layer="91"/>
 <pinref part="SUPPLY34" gate="GND" pin="GND"/>
+</segment>
+<segment>
+<pinref part="C7" gate="G$1" pin="2"/>
+<wire x1="91.44" y1="30.48" x2="91.44" y2="25.4" width="0.1524" layer="91"/>
+<pinref part="R12" gate="G$1" pin="1"/>
+<wire x1="91.44" y1="25.4" x2="81.28" y2="25.4" width="0.1524" layer="91"/>
+<pinref part="SUPPLY15" gate="GND" pin="GND"/>
+<wire x1="81.28" y1="22.86" x2="81.28" y2="25.4" width="0.1524" layer="91"/>
+<junction x="81.28" y="25.4"/>
 </segment>
 </net>
 <net name="N$3" class="0">
@@ -12814,14 +12821,6 @@ Metric Code Size 2012</description>
 <junction x="91.44" y="45.624"/>
 </segment>
 </net>
-<net name="N$11" class="0">
-<segment>
-<pinref part="C7" gate="G$1" pin="2"/>
-<wire x1="91.44" y1="30.48" x2="91.44" y2="25.4" width="0.1524" layer="91"/>
-<pinref part="R12" gate="G$1" pin="1"/>
-<wire x1="91.44" y1="25.4" x2="81.28" y2="25.4" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="N$12" class="0">
 <segment>
 <wire x1="91.44" y1="58.42" x2="91.44" y2="50.864" width="0.1524" layer="91"/>
@@ -12921,6 +12920,14 @@ Metric Code Size 2012</description>
 <pinref part="U1" gate="G$1" pin="PA03"/>
 <wire x1="7.62" y1="-48.26" x2="-7.62" y2="-48.26" width="0.1524" layer="91"/>
 <label x="-7.62" y="-48.26" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="R15" gate="G$1" pin="1"/>
+<pinref part="U$10" gate="G$1" pin="COLLECTOR"/>
+<wire x1="208.28" y1="-27.94" x2="208.28" y2="-33.02" width="0.1524" layer="91"/>
+<wire x1="208.28" y1="-33.02" x2="208.28" y2="-35.56" width="0.1524" layer="91"/>
+<wire x1="208.28" y1="-33.02" x2="193.04" y2="-33.02" width="0.1524" layer="91"/>
+<junction x="208.28" y="-33.02"/>
 </segment>
 </net>
 <net name="N$20" class="0">
@@ -13043,22 +13050,17 @@ Metric Code Size 2012</description>
 </net>
 <net name="N$23" class="0">
 <segment>
-<wire x1="10.16" y1="81.28" x2="10.16" y2="63.5" width="0.1524" layer="91"/>
 <pinref part="U$1" gate="G$1" pin="STAT"/>
 <wire x1="10.16" y1="63.5" x2="17.78" y2="63.5" width="0.1524" layer="91"/>
+<pinref part="U$9" gate="G$1" pin="C"/>
+<wire x1="10.16" y1="73.66" x2="10.16" y2="63.5" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$26" class="0">
+<net name="N$11" class="0">
 <segment>
 <pinref part="R14" gate="G$1" pin="1"/>
-<wire x1="10.16" y1="94.742" x2="10.16" y2="88.138" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$28" class="0">
-<segment>
-<pinref part="R15" gate="G$1" pin="1"/>
-<pinref part="U$10" gate="G$1" pin="COLLECTOR"/>
-<wire x1="208.28" y1="-27.94" x2="208.28" y2="-35.56" width="0.1524" layer="91"/>
+<pinref part="U$9" gate="G$1" pin="A"/>
+<wire x1="10.16" y1="94.742" x2="10.16" y2="83.82" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
