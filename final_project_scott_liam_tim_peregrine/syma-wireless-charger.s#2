@@ -12393,6 +12393,7 @@ Metric Code Size 2012</description>
 <plain>
 <text x="167.64" y="-40.64" size="1.778" layer="91">Phototransistor for IR LED from car charger</text>
 <text x="137.16" y="96.52" size="1.778" layer="91">Pins for transmit coil</text>
+<text x="93.98" y="35.56" size="1.778" layer="91">HIGH VOLTAGE CAP</text>
 </plain>
 <instances>
 <instance part="U$1" gate="G$1" x="38.1" y="63.5" rot="R270"/>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.5.0">
+<eagle version="7.4.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -308,6 +308,18 @@
 <text x="1.5" y="0.9" size="0.5" layer="21">&gt;NAME</text>
 <text x="1.5" y="0.3" size="0.5" layer="21">&gt;VALUE</text>
 </package>
+<package name="PT17-21B_PHOTOTRANSISTOR">
+<wire x1="0" y1="0" x2="2.4" y2="0" width="0.05" layer="21"/>
+<wire x1="0" y1="1.25" x2="2.4" y2="1.25" width="0.05" layer="21"/>
+<wire x1="2.4" y1="1.25" x2="2.4" y2="0" width="0.05" layer="21"/>
+<wire x1="0" y1="0" x2="0" y2="1.25" width="0.05" layer="21"/>
+<smd name="COLLECTOR" x="-0.19405" y="0.61641875" dx="1.6" dy="1.25" layer="1" rot="R180"/>
+<smd name="EMITTER" x="2.587725" y="0.629915625" dx="1.6" dy="1.25" layer="1" rot="R180"/>
+<text x="3.25" y="3.75" size="1.27" layer="1">&gt;NAME</text>
+<text x="3.25" y="2.25" size="1.27" layer="1">&gt;VALUE</text>
+<text x="0.7914" y="0.911309375" size="0.254" layer="21">C</text>
+<text x="1.42691875" y="0.095928125" size="0.254" layer="21">E</text>
+</package>
 </packages>
 <symbols>
 <symbol name="LTC1425-POWERTRANSMITTER">
@@ -519,6 +531,27 @@
 <wire x1="0" y1="10.16" x2="0" y2="5.08" width="0.254" layer="94"/>
 <wire x1="0" y1="-2.54" x2="0" y2="-7.62" width="0.254" layer="94"/>
 <text x="-6.096" y="-1.524" size="1.27" layer="94" rot="R90">LTST-C193KGKT GREEN LED</text>
+</symbol>
+<symbol name="PT17-21B_PHOTOTRANSISTOR">
+<pin name="EMITTER" x="0" y="-12.7" length="middle"/>
+<pin name="COLLECTOR" x="0" y="12.7" length="middle"/>
+<circle x="0" y="0" radius="5.6796125" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="1.27" x2="-2.54" y2="1.016" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="1.016" x2="-2.54" y2="-1.016" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="-1.016" x2="-2.54" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="1.016" x2="0" y2="5.08" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="-1.016" x2="0" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="-10.16" y1="7.62" x2="-8.89" y2="6.35" width="0.254" layer="94"/>
+<wire x1="-8.89" y1="6.35" x2="-9.398" y2="5.842" width="0.254" layer="94"/>
+<wire x1="-9.398" y1="5.842" x2="-8.128" y2="4.572" width="0.254" layer="94"/>
+<wire x1="-11.176" y1="5.588" x2="-9.906" y2="4.318" width="0.254" layer="94"/>
+<wire x1="-9.906" y1="4.318" x2="-10.414" y2="3.81" width="0.254" layer="94"/>
+<wire x1="-10.414" y1="3.81" x2="-8.89" y2="2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="12.7" x2="0" y2="5.08" width="0.254" layer="94"/>
+<wire x1="0" y1="-5.08" x2="0" y2="-12.7" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="4.064" x2="-2.54" y2="1.27" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="1.016" x2="-2.54" y2="-3.81" width="0.254" layer="94"/>
+<text x="7.62" y="2.54" size="2.54" layer="94">PT17-21B</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -759,6 +792,22 @@
 <connects>
 <connect gate="G$1" pin="ANODE" pad="ANODE"/>
 <connect gate="G$1" pin="CATHODE" pad="CATHODE"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="PT17-21B_PHOTOTRANSISTOR">
+<gates>
+<gate name="G$1" symbol="PT17-21B_PHOTOTRANSISTOR" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="PT17-21B_PHOTOTRANSISTOR">
+<connects>
+<connect gate="G$1" pin="COLLECTOR" pad="COLLECTOR"/>
+<connect gate="G$1" pin="EMITTER" pad="EMITTER"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -12277,7 +12326,7 @@ Metric Code Size 2012</description>
 <part name="SUPPLY8" library="supply2" deviceset="GND" device=""/>
 <part name="SUPPLY9" library="supply2" deviceset="VDD" device="" value="3.3V"/>
 <part name="SUPPLY10" library="supply2" deviceset="VDD" device="" value="3.3V"/>
-<part name="R4" library="resistor" deviceset="R-US_" device="R0805"/>
+<part name="R4" library="resistor" deviceset="R-US_" device="R0805" value="10k"/>
 <part name="C5" library="resistor" deviceset="C-EU" device="C0805K" value="100nF"/>
 <part name="SUPPLY11" library="supply2" deviceset="GND" device=""/>
 <part name="SUPPLY12" library="supply2" deviceset="VDD" device="" value="3.3V"/>
@@ -12333,10 +12382,17 @@ Metric Code Size 2012</description>
 <part name="SUPPLY33" library="supply2" deviceset="GND" device=""/>
 <part name="U$9" library="foe-scale" deviceset="LTST-C193KGKT_GREEN-LED" device=""/>
 <part name="R14" library="rcl" deviceset="R-US_" device="R0805" value="2.21k"/>
+<part name="U$10" library="foe-scale" deviceset="PT17-21B_PHOTOTRANSISTOR" device=""/>
+<part name="SUPPLY34" library="supply2" deviceset="GND" device=""/>
+<part name="R15" library="resistor" deviceset="R-US_" device="R0805" value="165"/>
+<part name="SUPPLY35" library="supply2" deviceset="VDD" device="" value="3.3V"/>
+<part name="U$11" library="foe-scale" deviceset="1X02" device=""/>
 </parts>
 <sheets>
 <sheet>
 <plain>
+<text x="167.64" y="-40.64" size="1.778" layer="91">Phototransistor for IR LED from car charger</text>
+<text x="137.16" y="96.52" size="1.778" layer="91">Pins for transmit coil</text>
 </plain>
 <instances>
 <instance part="U$1" gate="G$1" x="38.1" y="63.5" rot="R270"/>
@@ -12416,6 +12472,11 @@ Metric Code Size 2012</description>
 <instance part="SUPPLY33" gate="GND" x="30.48" y="33.02" rot="MR0"/>
 <instance part="U$9" gate="G$1" x="10.16" y="81.28"/>
 <instance part="R14" gate="G$1" x="10.16" y="99.822" rot="R90"/>
+<instance part="U$10" gate="G$1" x="208.28" y="-48.26"/>
+<instance part="SUPPLY34" gate="GND" x="208.28" y="-71.12"/>
+<instance part="R15" gate="G$1" x="208.28" y="-22.86" rot="R90"/>
+<instance part="SUPPLY35" gate="G$1" x="208.28" y="-10.16"/>
+<instance part="U$11" gate="G$1" x="137.16" y="88.9"/>
 </instances>
 <busses>
 </busses>
@@ -12567,6 +12628,11 @@ Metric Code Size 2012</description>
 <pinref part="SUPPLY33" gate="GND" pin="GND"/>
 <wire x1="30.48" y1="40.64" x2="30.48" y2="35.56" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="U$10" gate="G$1" pin="EMITTER"/>
+<wire x1="208.28" y1="-60.96" x2="208.28" y2="-68.58" width="0.1524" layer="91"/>
+<pinref part="SUPPLY34" gate="GND" pin="GND"/>
+</segment>
 </net>
 <net name="N$3" class="0">
 <segment>
@@ -12627,6 +12693,11 @@ Metric Code Size 2012</description>
 <pinref part="U$7" gate="G$1" pin="VDD"/>
 <wire x1="152.4" y1="48.26" x2="172.72" y2="48.26" width="0.1524" layer="91"/>
 <pinref part="SUPPLY31" gate="G$1" pin="VDD"/>
+</segment>
+<segment>
+<pinref part="R15" gate="G$1" pin="2"/>
+<wire x1="208.28" y1="-17.78" x2="208.28" y2="-12.7" width="0.1524" layer="91"/>
+<pinref part="SUPPLY35" gate="G$1" pin="VDD"/>
 </segment>
 </net>
 <net name="N$2" class="0">
@@ -12980,6 +13051,13 @@ Metric Code Size 2012</description>
 <pinref part="R14" gate="G$1" pin="1"/>
 <pinref part="U$9" gate="G$1" pin="ANODE"/>
 <wire x1="10.16" y1="94.742" x2="10.16" y2="91.44" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$28" class="0">
+<segment>
+<pinref part="R15" gate="G$1" pin="1"/>
+<pinref part="U$10" gate="G$1" pin="COLLECTOR"/>
+<wire x1="208.28" y1="-27.94" x2="208.28" y2="-35.56" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>

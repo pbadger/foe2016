@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.4.0">
+<eagle version="7.5.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -291,6 +291,18 @@
 <text x="-1.2" y="0.6" size="1.27" layer="21">+</text>
 <wire x1="1.2" y1="0.5" x2="1.2" y2="-0.4" width="0.127" layer="21"/>
 </package>
+<package name="PT17-21B_PHOTOTRANSISTOR">
+<wire x1="0" y1="0" x2="2.4" y2="0" width="0.05" layer="21"/>
+<wire x1="0" y1="1.25" x2="2.4" y2="1.25" width="0.05" layer="21"/>
+<wire x1="2.4" y1="1.25" x2="2.4" y2="0" width="0.05" layer="21"/>
+<wire x1="0" y1="0" x2="0" y2="1.25" width="0.05" layer="21"/>
+<smd name="COLLECTOR" x="-0.19405" y="0.61641875" dx="1.6" dy="1.25" layer="1" rot="R180"/>
+<smd name="EMITTER" x="2.587725" y="0.629915625" dx="1.6" dy="1.25" layer="1" rot="R180"/>
+<text x="3.25" y="3.75" size="1.27" layer="1">&gt;NAME</text>
+<text x="3.25" y="2.25" size="1.27" layer="1">&gt;VALUE</text>
+<text x="0.7914" y="0.911309375" size="0.254" layer="21">C</text>
+<text x="1.42691875" y="0.095928125" size="0.254" layer="21">E</text>
+</package>
 <package name="LTST-C193KGKT_GREEN-LED">
 <wire x1="-0.8" y1="-0.4" x2="0.8" y2="-0.4" width="0.05" layer="21"/>
 <wire x1="0.8" y1="-0.4" x2="0.8" y2="0.4" width="0.05" layer="21"/>
@@ -307,18 +319,6 @@
 <text x="0.04068125" y="-0.34579375" size="0.2" layer="21">G</text>
 <text x="1.5" y="0.9" size="0.5" layer="21">&gt;NAME</text>
 <text x="1.5" y="0.3" size="0.5" layer="21">&gt;VALUE</text>
-</package>
-<package name="PT17-21B_PHOTOTRANSISTOR">
-<wire x1="0" y1="0" x2="2.4" y2="0" width="0.05" layer="21"/>
-<wire x1="0" y1="1.25" x2="2.4" y2="1.25" width="0.05" layer="21"/>
-<wire x1="2.4" y1="1.25" x2="2.4" y2="0" width="0.05" layer="21"/>
-<wire x1="0" y1="0" x2="0" y2="1.25" width="0.05" layer="21"/>
-<smd name="COLLECTOR" x="-0.19405" y="0.61641875" dx="1.6" dy="1.25" layer="1" rot="R180"/>
-<smd name="EMITTER" x="2.587725" y="0.629915625" dx="1.6" dy="1.25" layer="1" rot="R180"/>
-<text x="3.25" y="3.75" size="1.27" layer="1">&gt;NAME</text>
-<text x="3.25" y="2.25" size="1.27" layer="1">&gt;VALUE</text>
-<text x="0.7914" y="0.911309375" size="0.254" layer="21">C</text>
-<text x="1.42691875" y="0.095928125" size="0.254" layer="21">E</text>
 </package>
 </packages>
 <symbols>
@@ -503,35 +503,6 @@
 <pin name="C" x="0" y="5.08" length="middle" rot="R270"/>
 <pin name="A" x="0" y="-7.62" length="middle" rot="R90"/>
 </symbol>
-<symbol name="LTST-C193KGKT_GREEN-LED">
-<pin name="ANODE" x="0" y="10.16" length="middle"/>
-<pin name="CATHODE" x="0" y="-7.62" length="middle"/>
-<wire x1="-5.08" y1="-2.54" x2="0" y2="-2.54" width="0.254" layer="94"/>
-<wire x1="0" y1="-2.54" x2="5.08" y2="-2.54" width="0.254" layer="94"/>
-<wire x1="-5.08" y1="10.16" x2="-5.08" y2="-2.54" width="0.254" layer="94"/>
-<wire x1="-5.08" y1="-2.54" x2="-5.08" y2="-7.62" width="0.254" layer="94"/>
-<wire x1="-5.08" y1="-7.62" x2="0" y2="-7.62" width="0.254" layer="94"/>
-<wire x1="0" y1="-7.62" x2="5.08" y2="-7.62" width="0.254" layer="94"/>
-<wire x1="5.08" y1="-7.62" x2="5.08" y2="-2.54" width="0.254" layer="94"/>
-<wire x1="5.08" y1="-2.54" x2="5.08" y2="10.16" width="0.254" layer="94"/>
-<wire x1="5.08" y1="10.16" x2="0" y2="10.16" width="0.254" layer="94"/>
-<polygon width="0.254" layer="94">
-<vertex x="-5.08" y="5.08"/>
-<vertex x="5.08" y="5.08"/>
-<vertex x="0" y="-2.54"/>
-</polygon>
-<wire x1="0" y1="10.16" x2="-5.08" y2="10.16" width="0.254" layer="94"/>
-<wire x1="5.842" y1="3.302" x2="8.382" y2="0.762" width="0.254" layer="94"/>
-<wire x1="8.382" y1="0.762" x2="9.398" y2="1.778" width="0.254" layer="94"/>
-<wire x1="9.398" y1="1.778" x2="11.684" y2="-0.762" width="0.254" layer="94"/>
-<wire x1="5.842" y1="0.762" x2="8.382" y2="-1.778" width="0.254" layer="94"/>
-<wire x1="8.382" y1="-1.778" x2="9.652" y2="-0.254" width="0.254" layer="94"/>
-<wire x1="9.652" y1="-0.254" x2="12.192" y2="-2.54" width="0.254" layer="94"/>
-<text x="8.382" y="3.302" size="1.778" layer="94">G</text>
-<wire x1="0" y1="10.16" x2="0" y2="5.08" width="0.254" layer="94"/>
-<wire x1="0" y1="-2.54" x2="0" y2="-7.62" width="0.254" layer="94"/>
-<text x="-6.096" y="-1.524" size="1.27" layer="94" rot="R90">LTST-C193KGKT GREEN LED</text>
-</symbol>
 <symbol name="PT17-21B_PHOTOTRANSISTOR">
 <pin name="EMITTER" x="0" y="-12.7" length="middle"/>
 <pin name="COLLECTOR" x="0" y="12.7" length="middle"/>
@@ -552,6 +523,27 @@
 <wire x1="-2.54" y1="4.064" x2="-2.54" y2="1.27" width="0.254" layer="94"/>
 <wire x1="-2.54" y1="1.016" x2="-2.54" y2="-3.81" width="0.254" layer="94"/>
 <text x="7.62" y="2.54" size="2.54" layer="94">PT17-21B</text>
+</symbol>
+<symbol name="LTST-C193KGKT_GREEN-LED">
+<pin name="ANODE" x="0.042" y="4.358" length="middle"/>
+<pin name="CATHODE" x="0.052" y="-2.55" length="middle"/>
+<text x="3.08" y="6.7" size="1.3" layer="94">LTST-C193KGKT GREEN LED</text>
+<polygon width="0.254" layer="94">
+<vertex x="-1" y="1"/>
+<vertex x="1" y="1"/>
+<vertex x="0" y="-1"/>
+</polygon>
+<wire x1="1.71" y1="0.46" x2="2.35" y2="-0.12" width="0.254" layer="94"/>
+<wire x1="2.35" y1="-0.12" x2="2.62" y2="0.15" width="0.254" layer="94"/>
+<wire x1="2.62" y1="0.15" x2="3.2" y2="-0.37" width="0.254" layer="94"/>
+<wire x1="1.59" y1="-0.12" x2="2.26" y2="-0.73" width="0.254" layer="94"/>
+<wire x1="2.26" y1="-0.73" x2="2.56" y2="-0.46" width="0.254" layer="94"/>
+<wire x1="2.56" y1="-0.46" x2="3.14" y2="-0.95" width="0.254" layer="94"/>
+<wire x1="-0.762" y1="-1.27" x2="0" y2="-1.27" width="0.254" layer="94"/>
+<wire x1="0" y1="-1.27" x2="1.016" y2="-1.27" width="0.254" layer="94"/>
+<wire x1="0" y1="-1.27" x2="0" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="0.254" y1="4.318" x2="0" y2="4.318" width="0.254" layer="94"/>
+<wire x1="0" y1="4.318" x2="0" y2="1.016" width="0.254" layer="94"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -783,22 +775,6 @@
 </device>
 </devices>
 </deviceset>
-<deviceset name="LTST-C193KGKT_GREEN-LED">
-<gates>
-<gate name="G$1" symbol="LTST-C193KGKT_GREEN-LED" x="0" y="-2.54"/>
-</gates>
-<devices>
-<device name="" package="LTST-C193KGKT_GREEN-LED">
-<connects>
-<connect gate="G$1" pin="ANODE" pad="ANODE"/>
-<connect gate="G$1" pin="CATHODE" pad="CATHODE"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
 <deviceset name="PT17-21B_PHOTOTRANSISTOR">
 <gates>
 <gate name="G$1" symbol="PT17-21B_PHOTOTRANSISTOR" x="0" y="0"/>
@@ -808,6 +784,22 @@
 <connects>
 <connect gate="G$1" pin="COLLECTOR" pad="COLLECTOR"/>
 <connect gate="G$1" pin="EMITTER" pad="EMITTER"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="LTST-C193KGKT_GREEN-LED">
+<gates>
+<gate name="G$1" symbol="LTST-C193KGKT_GREEN-LED" x="0" y="-2.54"/>
+</gates>
+<devices>
+<device name="" package="LTST-C193KGKT_GREEN-LED">
+<connects>
+<connect gate="G$1" pin="ANODE" pad="ANODE"/>
+<connect gate="G$1" pin="CATHODE" pad="CATHODE"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -12380,13 +12372,13 @@ Metric Code Size 2012</description>
 <part name="U$8" library="foe-scale" deviceset="SCHTKYDIODE-523" device=""/>
 <part name="SUPPLY32" library="supply2" deviceset="+5V" device=""/>
 <part name="SUPPLY33" library="supply2" deviceset="GND" device=""/>
-<part name="U$9" library="foe-scale" deviceset="LTST-C193KGKT_GREEN-LED" device=""/>
 <part name="R14" library="rcl" deviceset="R-US_" device="R0805" value="2.21k"/>
 <part name="U$10" library="foe-scale" deviceset="PT17-21B_PHOTOTRANSISTOR" device=""/>
 <part name="SUPPLY34" library="supply2" deviceset="GND" device=""/>
 <part name="R15" library="resistor" deviceset="R-US_" device="R0805" value="165"/>
 <part name="SUPPLY35" library="supply2" deviceset="VDD" device="" value="3.3V"/>
 <part name="U$11" library="foe-scale" deviceset="1X02" device=""/>
+<part name="U$9" library="foe-scale" deviceset="LTST-C193KGKT_GREEN-LED" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -12471,13 +12463,13 @@ Metric Code Size 2012</description>
 <instance part="U$8" gate="G$1" x="60.96" y="15.24"/>
 <instance part="SUPPLY32" gate="+5V" x="60.96" y="22.86"/>
 <instance part="SUPPLY33" gate="GND" x="30.48" y="33.02" rot="MR0"/>
-<instance part="U$9" gate="G$1" x="10.16" y="81.28"/>
 <instance part="R14" gate="G$1" x="10.16" y="99.822" rot="R90"/>
 <instance part="U$10" gate="G$1" x="208.28" y="-48.26"/>
 <instance part="SUPPLY34" gate="GND" x="208.28" y="-71.12"/>
 <instance part="R15" gate="G$1" x="208.28" y="-22.86" rot="R90"/>
 <instance part="SUPPLY35" gate="G$1" x="208.28" y="-10.16"/>
 <instance part="U$11" gate="G$1" x="137.16" y="88.9"/>
+<instance part="U$9" gate="G$1" x="10.16" y="83.82"/>
 </instances>
 <busses>
 </busses>
@@ -13051,8 +13043,7 @@ Metric Code Size 2012</description>
 </net>
 <net name="N$23" class="0">
 <segment>
-<pinref part="U$9" gate="G$1" pin="CATHODE"/>
-<wire x1="10.16" y1="73.66" x2="10.16" y2="63.5" width="0.1524" layer="91"/>
+<wire x1="10.16" y1="81.28" x2="10.16" y2="63.5" width="0.1524" layer="91"/>
 <pinref part="U$1" gate="G$1" pin="STAT"/>
 <wire x1="10.16" y1="63.5" x2="17.78" y2="63.5" width="0.1524" layer="91"/>
 </segment>
@@ -13060,8 +13051,7 @@ Metric Code Size 2012</description>
 <net name="N$26" class="0">
 <segment>
 <pinref part="R14" gate="G$1" pin="1"/>
-<pinref part="U$9" gate="G$1" pin="ANODE"/>
-<wire x1="10.16" y1="94.742" x2="10.16" y2="91.44" width="0.1524" layer="91"/>
+<wire x1="10.16" y1="94.742" x2="10.16" y2="88.138" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$28" class="0">
