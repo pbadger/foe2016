@@ -12794,9 +12794,8 @@ Metric Code Size 2012</description>
 <net name="N$9" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="FB"/>
-<wire x1="35.56" y1="40.64" x2="33.02" y2="35.56" width="0.1524" layer="91"/>
-<wire x1="33.02" y1="35.56" x2="33.02" y2="7.62" width="0.1524" layer="91"/>
-<wire x1="33.02" y1="7.62" x2="60.96" y2="7.62" width="0.1524" layer="91"/>
+<wire x1="35.56" y1="40.64" x2="35.56" y2="7.62" width="0.1524" layer="91"/>
+<wire x1="35.56" y1="7.62" x2="60.96" y2="7.62" width="0.1524" layer="91"/>
 <wire x1="60.96" y1="7.62" x2="68.58" y2="7.62" width="0.1524" layer="91"/>
 <wire x1="68.58" y1="7.62" x2="68.58" y2="35.56" width="0.1524" layer="91"/>
 <wire x1="68.58" y1="35.56" x2="71.12" y2="35.56" width="0.1524" layer="91"/>
