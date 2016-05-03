@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.5.0">
+<eagle version="7.4.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -1281,7 +1281,7 @@ diameter 2.54 mm, horizontal, grid 10.16 mm</description>
 <wire x1="3.7" y1="0" x2="3.7" y2="4.1" width="0.1" layer="21"/>
 <wire x1="-1.1" y1="4.1" x2="-1.1" y2="0" width="0.1" layer="21"/>
 <circle x="0" y="0.7" radius="0.22360625" width="0.1" layer="21"/>
-<smd name="P$1" x="1.248621875" y="2.058896875" dx="3.65" dy="2.65" layer="1"/>
+<smd name="GND2" x="1.248621875" y="2.058896875" dx="3.65" dy="2.65" layer="1"/>
 <wire x1="-1.090546875" y1="0.020065625" x2="3.663415625" y2="0.020065625" width="0.127" layer="22"/>
 <wire x1="3.663415625" y1="0.020065625" x2="3.711859375" y2="0.04013125" width="0.127" layer="22" curve="45"/>
 <wire x1="3.71853125" y1="4.09626875" x2="-1.08036875" y2="4.09626875" width="0.127" layer="22"/>
@@ -1294,8 +1294,8 @@ diameter 2.54 mm, horizontal, grid 10.16 mm</description>
 <wire x1="0" y1="0" x2="0" y2="1.25" width="0.05" layer="21"/>
 <smd name="COLLECTOR" x="-0.19405" y="0.61641875" dx="1.6" dy="1.25" layer="1" rot="R180"/>
 <smd name="EMITTER" x="2.587725" y="0.629915625" dx="1.6" dy="1.25" layer="1" rot="R180"/>
-<text x="3.25" y="3.75" size="1.27" layer="1">&gt;NAME</text>
-<text x="3.25" y="2.25" size="1.27" layer="1">&gt;VALUE</text>
+<text x="3.25" y="3.75" size="1.27" layer="21">&gt;NAME</text>
+<text x="3.25" y="2.25" size="1.27" layer="22">&gt;VALUE</text>
 <text x="0.7914" y="0.911309375" size="0.254" layer="21">C</text>
 <text x="1.42691875" y="0.095928125" size="0.254" layer="21">E</text>
 </package>
@@ -2172,6 +2172,7 @@ Converter with Fault Protection</description>
 <wire x1="22.86" y1="20.32" x2="-17.78" y2="20.32" width="0.254" layer="94"/>
 <wire x1="-17.78" y1="20.32" x2="-17.78" y2="-20.32" width="0.254" layer="94"/>
 <text x="0" y="2.54" size="1.778" layer="94">LTC4125</text>
+<pin name="GNDPAD" x="-10.16" y="20.32" length="middle" rot="R270"/>
 </symbol>
 <symbol name="PT17-21B_PHOTOTRANSISTOR">
 <pin name="EMITTER" x="0" y="-12.7" length="middle"/>
@@ -3200,6 +3201,7 @@ Short pins 3 and 4 together...</description>
 <connect gate="G$1" pin="FB" pad="FB"/>
 <connect gate="G$1" pin="FTH" pad="FTH"/>
 <connect gate="G$1" pin="GND" pad="GND"/>
+<connect gate="G$1" pin="GNDPAD" pad="GND2"/>
 <connect gate="G$1" pin="IMON" pad="IMON"/>
 <connect gate="G$1" pin="IN" pad="IN"/>
 <connect gate="G$1" pin="IN1" pad="IN1"/>

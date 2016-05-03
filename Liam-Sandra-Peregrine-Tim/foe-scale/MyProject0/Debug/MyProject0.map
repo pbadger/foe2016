@@ -7945,7 +7945,7 @@ OUTPUT(MyProject0.elf elf32-littlearm)
  .debug_line    0x000111eb      0x6e0 utils/src/utils_assert.o
  .debug_line    0x000118cb      0x773 utils/src/utils_list.o
 
-.debug_str      0x00000000    0x77bbe
+.debug_str      0x00000000    0x77c5b
  .debug_str     0x00000000    0x681d2 atmel_start.o
                               0x6892f (size before relaxing)
  .debug_str     0x000681d2      0x4d9 Device_Startup/startup_samd21.o
@@ -7996,11 +7996,11 @@ OUTPUT(MyProject0.elf elf32-littlearm)
                               0x65a8e (size before relaxing)
  .debug_str     0x00077631      0x4c7 hal/src/hal_usb_device.o
                               0x686d1 (size before relaxing)
- .debug_str     0x00077af8        0xc main.o
-                              0x66188 (size before relaxing)
- .debug_str     0x00077b04       0x32 utils/src/utils_assert.o
+ .debug_str     0x00077af8       0xa9 main.o
+                              0x661d1 (size before relaxing)
+ .debug_str     0x00077ba1       0x32 utils/src/utils_assert.o
                               0x6514e (size before relaxing)
- .debug_str     0x00077b36       0x88 utils/src/utils_list.o
+ .debug_str     0x00077bd3       0x88 utils/src/utils_list.o
                               0x651ec (size before relaxing)
 
 .debug_frame    0x00000000     0x2b58

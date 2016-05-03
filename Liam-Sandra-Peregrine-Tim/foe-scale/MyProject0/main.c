@@ -9,7 +9,7 @@ int main(void)
 	gpio_set_pin_direction(PA05,GPIO_DIRECTION_OUT);
 	gpio_set_pin_level(PA05,false);
 	gpio_set_pin_direction(PA03,GPIO_DIRECTION_OUT);
-	gpio_set_pin_level(PA03,false);
+	gpio_set_pin_level(PA03,true);
 	
 	
 	/* Replace with your application code */
