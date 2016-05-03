@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.4.0">
+<eagle version="7.5.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -38,7 +38,7 @@
 <layer number="42" name="bRestrict" color="1" fill="10" visible="yes" active="yes"/>
 <layer number="43" name="vRestrict" color="2" fill="10" visible="yes" active="yes"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
-<layer number="45" name="Holes" color="7" fill="1" visible="no" active="yes"/>
+<layer number="45" name="Holes" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
 <layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
 <layer number="48" name="Document" color="7" fill="1" visible="yes" active="yes"/>
@@ -62,6 +62,10 @@
 <wire x1="90.5" y1="15.5" x2="90.5" y2="80" width="0" layer="20"/>
 <wire x1="90.5" y1="80" x2="0" y2="80" width="0" layer="20"/>
 <wire x1="0" y1="80" x2="0" y2="15.5" width="0" layer="20"/>
+<hole x="88" y="77.5" drill="3.2"/>
+<hole x="88" y="18" drill="3.2"/>
+<hole x="2.5" y="18" drill="3.2"/>
+<hole x="2.5" y="77.5" drill="3.2"/>
 </plain>
 <libraries>
 <library name="rcl">
@@ -2737,8 +2741,8 @@ design rules under a new name.</description>
 <attribute name="VALUE" x="56.16" y="69.68" size="1.27" layer="27"/>
 </element>
 <element name="C10" library="rcl" package="C0805" value="47u" x="75.21" y="66.88" smashed="yes" rot="R180">
-<attribute name="NAME" x="76.48" y="65.61" size="1.27" layer="25" rot="R180"/>
-<attribute name="VALUE" x="76.48" y="69.42" size="1.27" layer="27" rot="R180"/>
+<attribute name="NAME" x="84.48" y="67.11" size="1.27" layer="25" rot="R180"/>
+<attribute name="VALUE" x="80.48" y="67.42" size="1.27" layer="27" rot="R180"/>
 </element>
 <element name="C11" library="rcl" package="C0805" value="47u" x="75.01" y="55.22" smashed="yes">
 <attribute name="NAME" x="72.24" y="58.49" size="1.27" layer="25"/>
@@ -2785,8 +2789,8 @@ design rules under a new name.</description>
 <attribute name="VALUE" x="74.32" y="75.08" size="1.27" layer="27" rot="R90"/>
 </element>
 <element name="C9" library="rcl" package="C0805" value="1u" x="75.16" y="69.57" smashed="yes">
-<attribute name="NAME" x="73.89" y="70.84" size="1.27" layer="25"/>
-<attribute name="VALUE" x="73.89" y="67.03" size="1.27" layer="27"/>
+<attribute name="NAME" x="80.39" y="69.34" size="1.27" layer="25"/>
+<attribute name="VALUE" x="77.89" y="69.03" size="1.27" layer="27"/>
 </element>
 <element name="DBG1" library="foe-scale" package="DEBUGHEAD" value="DEBUGHEAD" x="8.78" y="52.45" smashed="yes" rot="R270">
 <attribute name="NAME" x="10.669034375" y="53.241884375" size="1.27" layer="25" rot="R270"/>
@@ -2912,9 +2916,8 @@ design rules under a new name.</description>
 <via x="6" y="69.5" extent="1-16" drill="0.6"/>
 <wire x1="6" y1="69.5" x2="3" y2="72.5" width="1.016" layer="16"/>
 <via x="3" y="72.5" extent="1-16" drill="0.6"/>
-<wire x1="3" y1="72.5" x2="3" y2="75" width="1.016" layer="1"/>
-<wire x1="3" y1="75" x2="3.5" y2="75.5" width="1.016" layer="1"/>
-<wire x1="3.5" y1="75.5" x2="6.74" y2="75.5" width="1.016" layer="1"/>
+<wire x1="3" y1="72.5" x2="4.5" y2="75.5" width="1.016" layer="1"/>
+<wire x1="4.5" y1="75.5" x2="6.74" y2="75.5" width="1.016" layer="1"/>
 <wire x1="6.74" y1="75.5" x2="6.75" y2="75.51" width="1.016" layer="1"/>
 <wire x1="6.43" y1="69.07" x2="6.43" y2="67.5" width="1.016" layer="1"/>
 <wire x1="6.43" y1="67.5" x2="6.43" y2="66.57" width="1.016" layer="1"/>
