@@ -12792,17 +12792,6 @@ Metric Code Size 2012</description>
 <junction x="-10.16" y="68.58"/>
 </segment>
 </net>
-<net name="N$8" class="0">
-<segment>
-<pinref part="R6" gate="G$1" pin="1"/>
-<pinref part="U$1" gate="G$1" pin="IMON"/>
-<wire x1="30.48" y1="91.44" x2="30.48" y2="81.28" width="0.1524" layer="91"/>
-<pinref part="C1" gate="G$1" pin="2"/>
-<wire x1="20.32" y1="93.98" x2="20.32" y2="91.44" width="0.1524" layer="91"/>
-<wire x1="20.32" y1="91.44" x2="30.48" y2="91.44" width="0.1524" layer="91"/>
-<junction x="30.48" y="91.44"/>
-</segment>
-</net>
 <net name="N$9" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="FB"/>
@@ -12924,6 +12913,15 @@ Metric Code Size 2012</description>
 <pinref part="U1" gate="G$1" pin="PA04"/>
 <wire x1="7.62" y1="-53.34" x2="-7.62" y2="-53.34" width="0.1524" layer="91"/>
 <label x="-7.62" y="-53.34" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="R6" gate="G$1" pin="1"/>
+<pinref part="U$1" gate="G$1" pin="IMON"/>
+<wire x1="30.48" y1="91.44" x2="30.48" y2="81.28" width="0.1524" layer="91"/>
+<pinref part="C1" gate="G$1" pin="2"/>
+<wire x1="20.32" y1="93.98" x2="20.32" y2="91.44" width="0.1524" layer="91"/>
+<wire x1="20.32" y1="91.44" x2="30.48" y2="91.44" width="0.1524" layer="91"/>
+<junction x="30.48" y="91.44"/>
 </segment>
 </net>
 <net name="ALIGNED" class="0">

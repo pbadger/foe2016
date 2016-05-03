@@ -12485,7 +12485,7 @@ Metric Code Size 2012</description>
 <pinref part="C3" gate="G$1" pin="1"/>
 <wire x1="-106.68" y1="22.86" x2="-106.68" y2="27.94" width="0.1524" layer="91"/>
 <pinref part="R2" gate="G$1" pin="2"/>
-<wire x1="-83.82" y1="22.86" x2="-91.44" y2="22.86" width="0.1524" layer="91"/>
+<wire x1="-86.36" y1="22.86" x2="-91.44" y2="22.86" width="0.1524" layer="91"/>
 <wire x1="-91.44" y1="22.86" x2="-99.06" y2="22.86" width="0.1524" layer="91"/>
 <wire x1="-106.68" y1="27.94" x2="-91.44" y2="27.94" width="0.1524" layer="91"/>
 <wire x1="-91.44" y1="27.94" x2="-91.44" y2="22.86" width="0.1524" layer="91"/>
