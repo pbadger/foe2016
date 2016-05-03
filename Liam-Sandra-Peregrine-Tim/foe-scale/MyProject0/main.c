@@ -11,7 +11,11 @@ int main(void)
 	gpio_set_pin_direction(PA03,GPIO_DIRECTION_OUT);
 	gpio_set_pin_level(PA03,true);
 	
+	gpio_set_pin_direction(PA09,GPIO_DIRECTION_IN);
+	gpio_set_pin_level(PA08,true);
+	gpio_set_pin_level(PA10,true);
 	
+	TIMER_0_example();
 	/* Replace with your application code */
 	while(1) {
 	}
