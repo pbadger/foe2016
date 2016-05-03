@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.4.0">
+<eagle version="7.5.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -12366,7 +12366,6 @@ Metric Code Size 2012</description>
 <part name="SUPPLY28" library="supply2" deviceset="GND" device=""/>
 <part name="SUPPLY29" library="supply2" deviceset="GND" device=""/>
 <part name="SUPPLY30" library="supply2" deviceset="VDD" device="" value="3.3V"/>
-<part name="SUPPLY31" library="supply2" deviceset="VDD" device="" value="3.3V"/>
 <part name="C14" library="rcl" deviceset="C-EU" device="C1206" value="100n"/>
 <part name="U$8" library="foe-scale" deviceset="SCHTKYDIODE-523" device=""/>
 <part name="SUPPLY32" library="supply2" deviceset="+5V" device=""/>
@@ -12379,6 +12378,7 @@ Metric Code Size 2012</description>
 <part name="U$11" library="foe-scale" deviceset="1X02" device=""/>
 <part name="U$9" library="foe-scale" deviceset="LTST-C193KGKT_GREEN-LED" device=""/>
 <part name="C15" library="resistor" deviceset="C-EU" device="C0603" value="100n"/>
+<part name="SUPPLY31" library="supply2" deviceset="VDD" device="" value="3.3V"/>
 </parts>
 <sheets>
 <sheet>
@@ -12457,7 +12457,6 @@ Metric Code Size 2012</description>
 <instance part="SUPPLY28" gate="GND" x="121.92" y="40.64"/>
 <instance part="SUPPLY29" gate="GND" x="121.92" y="-12.7"/>
 <instance part="SUPPLY30" gate="G$1" x="175.26" y="-2.54"/>
-<instance part="SUPPLY31" gate="G$1" x="172.72" y="50.8"/>
 <instance part="C14" gate="G$1" x="78.74" y="58.42" rot="R270"/>
 <instance part="U$8" gate="G$1" x="60.96" y="15.24"/>
 <instance part="SUPPLY32" gate="+5V" x="60.96" y="22.86"/>
@@ -12470,6 +12469,7 @@ Metric Code Size 2012</description>
 <instance part="U$11" gate="G$1" x="137.16" y="88.9"/>
 <instance part="U$9" gate="G$1" x="7.62" y="78.74"/>
 <instance part="C15" gate="G$1" x="91.44" y="35.56"/>
+<instance part="SUPPLY31" gate="G$1" x="172.72" y="50.8"/>
 </instances>
 <busses>
 </busses>
@@ -12485,13 +12485,14 @@ Metric Code Size 2012</description>
 <pinref part="C3" gate="G$1" pin="1"/>
 <wire x1="-106.68" y1="22.86" x2="-106.68" y2="27.94" width="0.1524" layer="91"/>
 <pinref part="R2" gate="G$1" pin="2"/>
-<wire x1="-83.82" y1="22.86" x2="-91.44" y2="22.86" width="0.1524" layer="91"/>
 <wire x1="-91.44" y1="22.86" x2="-99.06" y2="22.86" width="0.1524" layer="91"/>
 <wire x1="-106.68" y1="27.94" x2="-91.44" y2="27.94" width="0.1524" layer="91"/>
 <wire x1="-91.44" y1="27.94" x2="-91.44" y2="22.86" width="0.1524" layer="91"/>
-<junction x="-91.44" y="22.86"/>
 <pinref part="SUPPLY4" gate="+5V" pin="+5V"/>
 <junction x="-91.44" y="27.94"/>
+<pinref part="U2" gate="AS1363" pin="IN"/>
+<wire x1="-91.44" y1="22.86" x2="-86.36" y2="22.86" width="0.1524" layer="91"/>
+<junction x="-91.44" y="22.86"/>
 </segment>
 <segment>
 <pinref part="SUPPLY27" gate="+5V" pin="+5V"/>
@@ -12696,14 +12697,19 @@ Metric Code Size 2012</description>
 <pinref part="SUPPLY19" gate="G$1" pin="VDD"/>
 </segment>
 <segment>
-<pinref part="U$7" gate="G$1" pin="VDD"/>
-<wire x1="152.4" y1="48.26" x2="172.72" y2="48.26" width="0.1524" layer="91"/>
-<pinref part="SUPPLY31" gate="G$1" pin="VDD"/>
-</segment>
-<segment>
 <pinref part="R15" gate="G$1" pin="2"/>
 <wire x1="208.28" y1="-17.78" x2="208.28" y2="-12.7" width="0.1524" layer="91"/>
 <pinref part="SUPPLY35" gate="G$1" pin="VDD"/>
+</segment>
+<segment>
+<pinref part="U$7" gate="G$1" pin="VDD"/>
+<pinref part="SUPPLY31" gate="G$1" pin="VDD"/>
+<wire x1="152.4" y1="48.26" x2="172.72" y2="48.26" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="U$6" gate="G$1" pin="VDD"/>
+<pinref part="SUPPLY30" gate="G$1" pin="VDD"/>
+<wire x1="152.4" y1="-5.08" x2="175.26" y2="-5.08" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$2" class="0">
@@ -13025,13 +13031,6 @@ Metric Code Size 2012</description>
 <pinref part="U1" gate="G$1" pin="PA17"/>
 <wire x1="68.58" y1="-68.58" x2="73.66" y2="-68.58" width="0.1524" layer="91"/>
 <label x="73.66" y="-68.58" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="3.3V" class="0">
-<segment>
-<pinref part="U$6" gate="G$1" pin="VDD"/>
-<wire x1="152.4" y1="-5.08" x2="175.26" y2="-5.08" width="0.1524" layer="91"/>
-<pinref part="SUPPLY30" gate="G$1" pin="VDD"/>
 </segment>
 </net>
 <net name="N$7" class="0">
