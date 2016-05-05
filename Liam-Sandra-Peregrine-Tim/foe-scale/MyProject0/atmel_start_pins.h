@@ -19,4 +19,10 @@
 #define PA24  GPIO(GPIO_PORTA, 24)
 #define PA25  GPIO(GPIO_PORTA, 25)
 
+// Level shifter
+#define SCK  GPIO(GPIO_PORTA, 8)
+#define SDI  GPIO(GPIO_PORTA, 9)
+#define CONV  GPIO(GPIO_PORTA, 10)
+
+
 #endif // ATMEL_START_PINS_H_INCLUDED

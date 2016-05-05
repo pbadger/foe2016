@@ -14,6 +14,17 @@
 #include <hpl_gclk1_v210_base.h>
 #include <peripheral_gclk_config.h>
 
+// indicate if conversion is done
+volatile bool done;
+
+// index for data when shifting in
+uint8_t data_index;
+
+// data buffers
+uint8_t data [16];
+uint8_t data_buffer [2];
+uint16_t value;
+
 #if CONF_DMAC_MAX_USED_DESC > 0
 #    include <hpl_dma.h>
 
@@ -35,9 +46,12 @@ extern struct _irq_descriptor *_irq_table[PERIPH_COUNT_IRQn];
 extern void Default_Handler(void);
 
 struct spi_m_sync_descriptor SPI_0;
-struct timer_descriptor TIMER_0;
 
+struct timer_descriptor TIMER_0;
 static struct timer_task TIMER_0_task1, TIMER_0_task2;
+
+struct timer_descriptor TIMER_1;
+static struct timer_task TIMER_1_task1, TIMER_1_task2;
 
 struct usart_sync_descriptor USART_0;
 
@@ -143,6 +157,7 @@ static void TIMER_0_init(void)
 	_gclk_enable_channel(TC3_GCLK_ID, CONF_GCLK_TC3_SRC);
 	timer_init(&TIMER_0, TC3, _tc_get_timer());
 }
+
 
 void EXTERNAL_IRQ_0_init(void)
 {
@@ -462,25 +477,93 @@ void SPI_0_example(void)
 /**
  * Example of using TIMER_0.
  */
+// converts array to uint16_t
+static void array_to_16bit(void)
+{
+	
+	uint8_t MSbyte = 0;
+	uint8_t LSbyte = 0;
+	
+	// previous value for MSbyte
+	uint8_t prev1 = 0;
+	// previous value for LSbyte
+	uint8_t prev2 = 0;
+	
+	// convert first 8 bits of data to a byte
+	for(int i = 0;i<8;i++)
+	{
+		MSbyte = prev1 + (data[7-i]<<i);
+		prev1 = MSbyte;
+	}
+	// convert last 8 bits to a byte
+	for(int i = 0;i<8;i++)
+	{
+		LSbyte = prev2 + (data[15-i]<<i);
+		prev2 = LSbyte;
+	}
+	
+	// place data in byte
+	data_buffer[1] = LSbyte;
+	data_buffer[2] = MSbyte;
+	
+	value = MSbyte;
+	value = value << 8;
+	value |= LSbyte;
+	
+}
+
 static void TIMER_0_task1_cb(const struct timer_task *const timer_task)
 {
+
+	gpio_set_pin_level(CONV,false);
+	gpio_set_pin_level(CONV,true);
+
+
 }
 
 static void TIMER_0_task2_cb(const struct timer_task *const timer_task)
 {
+	gpio_set_pin_level(CONV,false);
+	for(uint8_t i = 0; i < 16; i++)
+	{
+		gpio_set_pin_level(SCK,false);
+		gpio_set_pin_level(SCK,true);
+		
+		// get pin level and put value into data array
+		if(gpio_get_pin_level(SDI))
+		{
+			data[i] = 1;
+		}
+		else
+		{
+			data[i] = 0;
+		}
+	}
+	array_to_16bit();
+	if (value > 32767)
+	{
+		gpio_set_pin_level(PA04,false);
+	}
+	else
+	{
+		gpio_set_pin_level(PA04,true);
+	}
+	
 }
+
 
 void TIMER_0_example(void)
 {
-	TIMER_0_task1.interval = 100;
+	TIMER_0_task1.interval = 1;
 	TIMER_0_task1.cb = TIMER_0_task1_cb;
 	TIMER_0_task1.mode = TIMER_TASK_REPEAT;
-	TIMER_0_task2.interval = 200;
+	TIMER_0_task2.interval = 2;
 	TIMER_0_task2.cb = TIMER_0_task2_cb;
 	TIMER_0_task2.mode = TIMER_TASK_REPEAT;
 
 	timer_add_task(&TIMER_0, &TIMER_0_task1);
 	timer_add_task(&TIMER_0, &TIMER_0_task2);
+	timer_set_clock_cycles_per_tick(&TIMER_0,1);
 	timer_start(&TIMER_0);
 }
 
@@ -498,6 +581,7 @@ void system_init(void)
 	SPI_0_init();
 
 	USART_0_init();
+
 	TIMER_0_init();
 	EXTERNAL_IRQ_0_init();
 

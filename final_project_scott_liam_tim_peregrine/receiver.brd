@@ -62,9 +62,10 @@
 <wire x1="51.74" y1="21.59" x2="51.74" y2="54.6" width="0" layer="20"/>
 <wire x1="51.74" y1="54.6" x2="0" y2="54.6" width="0" layer="20"/>
 <wire x1="0" y1="54.6" x2="0" y2="21.59" width="0" layer="20"/>
-<text x="3.81" y="39.37" size="0.6096" layer="21" rot="R90">We need to make sure to place this so that it matches with the base station phototransistor</text>
 <text x="48.26" y="52.07" size="0.6096" layer="21" rot="R270">For Battery</text>
 <text x="1.21" y="31.39" size="0.6096" layer="21" rot="R90">For Receive Coil</text>
+<dimension x1="0" y1="54.61" x2="0" y2="21.59" x3="-12.7" y3="38.1" textsize="1.778" layer="20" unit="inch"/>
+<dimension x1="0" y1="54.61" x2="51.74" y2="54.6" x3="25.87098125" y3="59.69408125" textsize="1.778" layer="20" unit="inch"/>
 </plain>
 <libraries>
 <library name="resistor">
