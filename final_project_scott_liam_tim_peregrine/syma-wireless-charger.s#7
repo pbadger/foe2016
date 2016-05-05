@@ -12978,6 +12978,7 @@ Metric Code Size 2012</description>
 <wire x1="10.16" y1="104.902" x2="10.16" y2="116.84" width="0.1524" layer="91"/>
 <junction x="10.16" y="116.84"/>
 <pinref part="R14" gate="G$1" pin="2"/>
+<junction x="-2.54" y="81.28"/>
 </segment>
 </net>
 <net name="N$21" class="0">

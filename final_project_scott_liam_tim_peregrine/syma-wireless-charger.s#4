@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.5.0">
+<eagle version="7.4.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -8,20 +8,20 @@
 </settings>
 <grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
-<layer number="1" name="Top" color="4" fill="1" visible="yes" active="no"/>
-<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="no"/>
-<layer number="17" name="Pads" color="2" fill="1" visible="yes" active="no"/>
-<layer number="18" name="Vias" color="2" fill="1" visible="yes" active="no"/>
-<layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="no"/>
-<layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="no"/>
-<layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="no"/>
-<layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="no"/>
-<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="no"/>
-<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="no"/>
-<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="no"/>
-<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="no"/>
-<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="no"/>
-<layer number="28" name="bValues" color="7" fill="1" visible="yes" active="no"/>
+<layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
+<layer number="17" name="Pads" color="2" fill="1" visible="no" active="no"/>
+<layer number="18" name="Vias" color="2" fill="1" visible="no" active="no"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="no" active="no"/>
+<layer number="20" name="Dimension" color="15" fill="1" visible="no" active="no"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="no" active="no"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="no" active="no"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="no"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="no"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="no" active="no"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="no" active="no"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="no" active="no"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="no" active="no"/>
 <layer number="29" name="tStop" color="7" fill="3" visible="no" active="no"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="no" active="no"/>
 <layer number="31" name="tCream" color="7" fill="4" visible="no" active="no"/>
@@ -30,8 +30,8 @@
 <layer number="34" name="bFinish" color="6" fill="6" visible="no" active="no"/>
 <layer number="35" name="tGlue" color="7" fill="4" visible="no" active="no"/>
 <layer number="36" name="bGlue" color="7" fill="5" visible="no" active="no"/>
-<layer number="37" name="tTest" color="7" fill="1" visible="yes" active="no"/>
-<layer number="38" name="bTest" color="7" fill="1" visible="yes" active="no"/>
+<layer number="37" name="tTest" color="7" fill="1" visible="no" active="no"/>
+<layer number="38" name="bTest" color="7" fill="1" visible="no" active="no"/>
 <layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="no"/>
 <layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="no"/>
 <layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="no"/>
@@ -39,12 +39,12 @@
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="no"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="no"/>
 <layer number="45" name="Holes" color="7" fill="1" visible="no" active="no"/>
-<layer number="46" name="Milling" color="3" fill="1" visible="yes" active="no"/>
-<layer number="47" name="Measures" color="7" fill="1" visible="yes" active="no"/>
-<layer number="48" name="Document" color="7" fill="1" visible="yes" active="no"/>
-<layer number="49" name="Reference" color="7" fill="1" visible="yes" active="no"/>
-<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="no"/>
-<layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="no"/>
+<layer number="46" name="Milling" color="3" fill="1" visible="no" active="no"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="no" active="no"/>
+<layer number="48" name="Document" color="7" fill="1" visible="no" active="no"/>
+<layer number="49" name="Reference" color="7" fill="1" visible="no" active="no"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="no" active="no"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="no" active="no"/>
 <layer number="90" name="Modules" color="5" fill="1" visible="yes" active="yes"/>
 <layer number="91" name="Nets" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="92" name="Busses" color="1" fill="1" visible="yes" active="yes"/>
@@ -84,7 +84,7 @@
 <wire x1="3.7" y1="0" x2="3.7" y2="4.1" width="0.1" layer="21"/>
 <wire x1="-1.1" y1="4.1" x2="-1.1" y2="0" width="0.1" layer="21"/>
 <circle x="0" y="0.7" radius="0.22360625" width="0.1" layer="21"/>
-<smd name="P$1" x="1.248621875" y="2.058896875" dx="3.65" dy="2.65" layer="1"/>
+<smd name="GND2" x="1.248621875" y="2.058896875" dx="3.65" dy="2.65" layer="1"/>
 <wire x1="-1.090546875" y1="0.020065625" x2="3.663415625" y2="0.020065625" width="0.127" layer="22"/>
 <wire x1="3.663415625" y1="0.020065625" x2="3.711859375" y2="0.04013125" width="0.127" layer="22" curve="45"/>
 <wire x1="3.71853125" y1="4.09626875" x2="-1.08036875" y2="4.09626875" width="0.127" layer="22"/>
@@ -298,8 +298,8 @@
 <wire x1="0" y1="0" x2="0" y2="1.25" width="0.05" layer="21"/>
 <smd name="COLLECTOR" x="-0.19405" y="0.61641875" dx="1.6" dy="1.25" layer="1" rot="R180"/>
 <smd name="EMITTER" x="2.587725" y="0.629915625" dx="1.6" dy="1.25" layer="1" rot="R180"/>
-<text x="3.25" y="3.75" size="1.27" layer="1">&gt;NAME</text>
-<text x="3.25" y="2.25" size="1.27" layer="1">&gt;VALUE</text>
+<text x="3.25" y="3.75" size="1.27" layer="21">&gt;NAME</text>
+<text x="3.25" y="2.25" size="1.27" layer="22">&gt;VALUE</text>
 <text x="0.7914" y="0.911309375" size="0.254" layer="21">C</text>
 <text x="1.42691875" y="0.095928125" size="0.254" layer="21">E</text>
 </package>
@@ -348,6 +348,7 @@
 <wire x1="22.86" y1="20.32" x2="-17.78" y2="20.32" width="0.254" layer="94"/>
 <wire x1="-17.78" y1="20.32" x2="-17.78" y2="-20.32" width="0.254" layer="94"/>
 <text x="0" y="2.54" size="1.778" layer="94">LTC4125</text>
+<pin name="GNDPAD" x="-10.16" y="20.32" length="middle" rot="R270"/>
 </symbol>
 <symbol name="SAMD21E">
 <wire x1="-10.16" y1="7.62" x2="-10.16" y2="-43.18" width="0.254" layer="94"/>
@@ -559,6 +560,7 @@
 <connect gate="G$1" pin="FB" pad="FB"/>
 <connect gate="G$1" pin="FTH" pad="FTH"/>
 <connect gate="G$1" pin="GND" pad="GND"/>
+<connect gate="G$1" pin="GNDPAD" pad="GND2"/>
 <connect gate="G$1" pin="IMON" pad="IMON"/>
 <connect gate="G$1" pin="IN" pad="IN"/>
 <connect gate="G$1" pin="IN1" pad="IN1"/>
@@ -12560,6 +12562,10 @@ Metric Code Size 2012</description>
 <pinref part="SUPPLY16" gate="GND" pin="GND"/>
 <pinref part="U$1" gate="G$1" pin="GND"/>
 <wire x1="50.8" y1="30.48" x2="50.8" y2="40.64" width="0.1524" layer="91"/>
+<pinref part="U$1" gate="G$1" pin="GNDPAD"/>
+<wire x1="58.42" y1="73.66" x2="50.8" y2="73.66" width="0.1524" layer="91"/>
+<wire x1="50.8" y1="73.66" x2="50.8" y2="40.64" width="0.1524" layer="91"/>
+<junction x="50.8" y="40.64"/>
 </segment>
 <segment>
 <pinref part="C1" gate="G$1" pin="1"/>
