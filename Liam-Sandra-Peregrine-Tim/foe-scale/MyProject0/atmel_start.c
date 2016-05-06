@@ -14,16 +14,30 @@
 #include <hpl_gclk1_v210_base.h>
 #include <peripheral_gclk_config.h>
 
+
+// sampling frequency
+#define freq 2940
+// sampling time
+#define t 1
+// # of samples (note that we cannot sample for too long... when I tried to sample for 5 secs (14700 samples) I got an "ram overflow error"
+#define numConvs 2940
+
 // indicate if conversion is done
 volatile bool done;
+// count number of conversions
+volatile uint8_t count = 0;
+
 
 // index for data when shifting in
 uint8_t data_index;
 
 // data buffers
 uint8_t data [16];
-uint8_t data_buffer [2];
 uint16_t value;
+
+// holds all sample values
+uint16_t data_buffer[numConvs];
+
 
 #if CONF_DMAC_MAX_USED_DESC > 0
 #    include <hpl_dma.h>
@@ -49,9 +63,6 @@ struct spi_m_sync_descriptor SPI_0;
 
 struct timer_descriptor TIMER_0;
 static struct timer_task TIMER_0_task1, TIMER_0_task2;
-
-struct timer_descriptor TIMER_1;
-static struct timer_task TIMER_1_task1, TIMER_1_task2;
 
 struct usart_sync_descriptor USART_0;
 
@@ -502,10 +513,6 @@ static void array_to_16bit(void)
 		prev2 = LSbyte;
 	}
 	
-	// place data in byte
-	data_buffer[1] = LSbyte;
-	data_buffer[2] = MSbyte;
-	
 	value = MSbyte;
 	value = value << 8;
 	value |= LSbyte;
@@ -514,11 +521,7 @@ static void array_to_16bit(void)
 
 static void TIMER_0_task1_cb(const struct timer_task *const timer_task)
 {
-
-	gpio_set_pin_level(CONV,false);
 	gpio_set_pin_level(CONV,true);
-
-
 }
 
 static void TIMER_0_task2_cb(const struct timer_task *const timer_task)
@@ -540,6 +543,19 @@ static void TIMER_0_task2_cb(const struct timer_task *const timer_task)
 		}
 	}
 	array_to_16bit();
+	
+	if(count >= numConvs - 1)
+	{
+		data_buffer[count] = value;
+		count = 0;
+	}
+	else
+	{
+		count++;
+	}
+	
+	// sets the threshold value for where the LED turns on and off... it will turn on when signal exceeds threshold, and off when it goes below. 
+	// Right now threshold is set at (2^16)/2 since 0 is min, and 2^16 is max. So 50% threshold.
 	if (value > 32767)
 	{
 		gpio_set_pin_level(PA04,false);

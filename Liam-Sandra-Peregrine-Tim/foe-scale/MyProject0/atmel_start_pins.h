@@ -21,7 +21,7 @@
 
 // Level shifter
 #define SCK  GPIO(GPIO_PORTA, 8)
-#define SDI  GPIO(GPIO_PORTA, 9)
+#define SDI  GPIO(GPIO_PORTA, 22)
 #define CONV  GPIO(GPIO_PORTA, 10)
 
 
