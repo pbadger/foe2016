@@ -25,7 +25,7 @@
 // indicate if conversion is done
 volatile bool done;
 // count number of conversions
-volatile uint8_t count = 0;
+volatile uint16_t count = 0;
 
 
 // index for data when shifting in
@@ -33,7 +33,7 @@ uint8_t data_index;
 
 // data buffers
 uint8_t data [16];
-uint16_t value;
+uint16_t val;
 
 // holds all sample values
 uint16_t data_buffer[numConvs];
@@ -513,9 +513,10 @@ static void array_to_16bit(void)
 		prev2 = LSbyte;
 	}
 	
-	value = MSbyte;
-	value = value << 8;
-	value |= LSbyte;
+	val = MSbyte;
+	val = val << 8;
+	val |= LSbyte;
+	val = (2^16-1) - val;
 	
 }
 
@@ -544,9 +545,11 @@ static void TIMER_0_task2_cb(const struct timer_task *const timer_task)
 	}
 	array_to_16bit();
 	
+	data_buffer[count] = val;
+	
 	if(count >= numConvs - 1)
 	{
-		data_buffer[count] = value;
+		timer_stop(&TIMER_0);
 		count = 0;
 	}
 	else
@@ -556,7 +559,7 @@ static void TIMER_0_task2_cb(const struct timer_task *const timer_task)
 	
 	// sets the threshold value for where the LED turns on and off... it will turn on when signal exceeds threshold, and off when it goes below. 
 	// Right now threshold is set at (2^16)/2 since 0 is min, and 2^16 is max. So 50% threshold.
-	if (value > 32767)
+	if (val > 32767)
 	{
 		gpio_set_pin_level(PA04,false);
 	}
@@ -564,6 +567,7 @@ static void TIMER_0_task2_cb(const struct timer_task *const timer_task)
 	{
 		gpio_set_pin_level(PA04,true);
 	}
+	
 	
 }
 

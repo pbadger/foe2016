@@ -20,8 +20,9 @@ int main(void)
 
 	
 	TIMER_0_example();
+	
+	
 
 	/* Replace with your application code */
 	while(1) {
-	}
 }
